@@ -4,7 +4,7 @@
   "description": "my personal website",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && copyfiles -u 1 public/* dist"
+    "build": "tsc && cp -r public/* dist/"
   },
   "repository": {
     "type": "git",
