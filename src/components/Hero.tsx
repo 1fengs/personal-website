@@ -2,6 +2,12 @@
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react'
 import { ImageWithFallback} from './ui/ImageWithFallback';
 
+function TextEmphasis({ children }: { children: React.ReactNode }) {
+    return (
+        <span className="font-semibold">{children}</span>
+    );
+}
+
 function SocialLinks() {
     return (
         <div className="flex space-x-4 pt-4">
@@ -50,9 +56,9 @@ function BriefIntro() {
                 Senior Software Engineer
             </p>
 
-            <p className="text-lg mb-8">
+            <p className="text-lg mb-8 text-justify">
                 with experience in automotive software development, robotics, and test automation. 
-                Skilled in C/C++, Python, and ROS2 with a strong background in Linux-based systems, embedded development, and validation. Experienced in autonomous driving projects, HiL testing, and building reliable engineering tools in agile environments.
+                Skilled in <TextEmphasis>C/C++</TextEmphasis>, <TextEmphasis>Python</TextEmphasis>, <TextEmphasis>Matlab/Simulink</TextEmphasis>, and <TextEmphasis>ROS2</TextEmphasis> with a strong background in Linux-based systems, embedded development, and validation. Experienced in autonomous driving projects, HiL testing, and building reliable engineering tools in agile environments.
             </p>
 
             <SocialLinks />
