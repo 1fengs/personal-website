@@ -6,7 +6,7 @@ function SocialLinks() {
     return (
         <div className="flex space-x-4 pt-4">
             <a
-                href="https://github.com"
+                href="https://github.com/1fengs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
