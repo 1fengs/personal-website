@@ -1,24 +1,26 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
-  "description": "my personal website",
-  "main": "index.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build": "tsc && cp -r public/* dist/"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/1fengs/personal-website.git"
+  "dependencies": {
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/1fengs/personal-website/issues"
-  },
-  "homepage": "https://github.com/1fengs/personal-website#readme",
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
