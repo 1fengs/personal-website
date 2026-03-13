@@ -14,7 +14,7 @@ function SocialLinks() {
                 <Github size={24} className="text-gray-700" />
             </a>
             <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/yifeng-shen95/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
@@ -22,7 +22,7 @@ function SocialLinks() {
                 <Linkedin size={24} className="text-gray-700" />
             </a>
             <a
-                href="mailto:your.email@example.com"
+                href="mailto:evanshen95@gmail.com"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
             >
                 <Mail size={24} className="text-gray-700" />
