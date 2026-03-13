@@ -56,20 +56,33 @@ function BriefIntro() {
                 Senior Software Engineer
             </p>
 
-            <p className="text-lg mb-8 text-justify">
+            <p className="text-lg mb-4 text-justify">
                 with experience in automotive software development, robotics, and test automation. 
                 Skilled in <TextEmphasis>C/C++</TextEmphasis>, <TextEmphasis>Python</TextEmphasis>, <TextEmphasis>Matlab/Simulink</TextEmphasis>, and <TextEmphasis>ROS2</TextEmphasis> with a strong background in Linux-based systems, embedded development, and validation. Experienced in autonomous driving projects, HiL testing, and building reliable engineering tools in agile environments.
             </p>
 
-            <SocialLinks />
+            <div className="flex items-center gap-8 pt-4">
+                <SocialLinks />
 
-            <div className="pt-4">
-                <button
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="px-8 py-3 bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
-                >
-                    Get in Touch
-                </button>
+                <div className="flex space-x-4">
+                    <div className="pt-4">
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="px-8 py-3 bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
+                        >
+                            Get in Touch
+                        </button>
+                    </div>
+
+                    {/* <div className="pt-4">
+                        <button
+                            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                            className="px-8 py-3 bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
+                        >
+                            Check out My Resume
+                        </button>
+                    </div> */}
+                </div>
             </div>
         </div>
 
