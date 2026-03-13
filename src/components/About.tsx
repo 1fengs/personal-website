@@ -44,7 +44,7 @@ function ExperienceBox() {
 
 export function About() {
     return (
-        <section id="about" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans dark:bg-black">
+        <section id="about" className="flex min-h-screen items-center justify-center bg-white">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="grid grid-cols-2 gap-12 items-center">
 

@@ -1,5 +1,5 @@
 'use client';
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react'
 import { ImageWithFallback} from './ui/ImageWithFallback';
 
 function SocialLinks() {
@@ -22,6 +22,14 @@ function SocialLinks() {
                 <Linkedin size={24} className="text-gray-700" />
             </a>
             <a
+                href="https://www.instagram.com/esyf/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
+>
+                <Instagram size={24} className="text-gray-700" />
+            </a>
+            <a
                 href="mailto:evanshen95@gmail.com"
                 className="p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow"
             >
@@ -34,7 +42,7 @@ function SocialLinks() {
 function BriefIntro() {
     return (
         <div className='space-y-6'>
-            <h1 className="text-6xl font-bold mb-4">
+            <h1 className="text-6xl font-bold mb-8">
                 Welcome,<br /> I'm <span className="text-blue-600">Yifeng Shen</span>
             </h1>
 
@@ -42,8 +50,9 @@ function BriefIntro() {
                 Senior Software Engineer
             </p>
 
-            <p className="text-lg mb-4">
-                I specialize in C++ and python.
+            <p className="text-lg mb-8">
+                with experience in automotive software development, robotics, and test automation. 
+                Skilled in C/C++, Python, and ROS2 with a strong background in Linux-based systems, embedded development, and validation. Experienced in autonomous driving projects, HiL testing, and building reliable engineering tools in agile environments.
             </p>
 
             <SocialLinks />
@@ -51,7 +60,7 @@ function BriefIntro() {
             <div className="pt-4">
                 <button
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-md"
+                    className="px-8 py-3 bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
                 >
                     Get in Touch
                 </button>
@@ -77,7 +86,7 @@ function ProfilePicture() {
 
 export function Hero() {
     return (
-        <section id="home" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans dark:bg-black">
+        <section id="home" className="flex min-h-screen items-center bg-blue-50 justify-center">
             <div className="max-w-7xl mx-auto px-8 py-20">
                 <div className="grid grid-cols-2 gap-12 items-center">
                     <BriefIntro />
