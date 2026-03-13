@@ -35,11 +35,11 @@ function BriefIntro() {
     return (
         <div className='space-y-6'>
             <h1 className="text-6xl font-bold mb-4">
-                Hi, I'm <span className="text-blue-600">Yifeng Shen</span>
+                Welcome,<br /> I'm <span className="text-blue-600">Yifeng Shen</span>
             </h1>
 
             <p className="text-2xl mb-4">
-                (Senior) Software Engineer
+                Senior Software Engineer
             </p>
 
             <p className="text-lg mb-4">
