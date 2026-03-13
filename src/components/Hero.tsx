@@ -66,7 +66,7 @@ function ProfilePicture() {
         <div className="relative">
             <div className="w-128 h-128 aspect-square rounded-2xl overflow-hidden shadow-2xl">
             <ImageWithFallback
-                src="/profilePhoto.jpeg"
+                src="profilePhoto.jpeg"
                 alt="Workspace"
                 className="object-cover"
             />
