@@ -90,7 +90,7 @@ function ProjectCard() {
 
 export function Projects() {
     return (
-        <section id="projects" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans dark:bg-black">
+        <section id="projects" className="flex min-h-screen items-center justify-center">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold">My Projects</h2>

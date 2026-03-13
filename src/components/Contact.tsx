@@ -64,7 +64,7 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <section id="contact" className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
       <div className="max-w-7xl mx-auto px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>

@@ -63,7 +63,7 @@ function SkillCard() {
 
 export function Skills() {
     return (
-        <section id="skills" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans dark:bg-black">
+        <section id="skills" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans">
             <div className="max-w-7xl mx-auto px-8">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold">Skills & Expertise</h2>
