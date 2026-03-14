@@ -9,9 +9,6 @@ export function Skills() {
       className="relative py-32 overflow-hidden"
     >
       {/* background glow */}
-
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/20 blur-[200px] rounded-full" />
-
       <div className="max-w-6xl mx-auto px-6 relative">
 
         <div className="text-center mb-20">
