@@ -20,7 +20,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yifeng Shen",
-  description: "Yifeng Shen's personal website, showcasing my work and projects.",
+  description: "Yifeng Shen's personal website, showcasing my work and skills.",
 };
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className="font-sans antialiased"
+        className="antialiased"
       >
         {children}
       </body>

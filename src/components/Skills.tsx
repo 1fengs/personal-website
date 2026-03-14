@@ -63,10 +63,10 @@ function SkillCard() {
 
 export function Skills() {
     return (
-        <section id="skills" className="section">
-            <div className="container">
+        <section id="skills" className="section-customer">
+            <div className="container-customer">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold">Skills & Expertise</h2>
+                    <h2 className="text-4xl fsont-bold">Skills & Expertise</h2>
                     <p className="mt-4 text-xl mb-4">
                         Technologies and tools I excel at, and the areas I specialize in.
                     </p>

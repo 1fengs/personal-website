@@ -90,8 +90,8 @@ function ProjectCard() {
 
 export function Projects() {
     return (
-        <section id="projects" className="section">
-            <div className="container">
+        <section id="projects" className="section-customer">
+            <div className="container-customer">
                 <div className="text-center mb-16 mt-32">
                     <h2 className="text-4xl font-bold">My Projects</h2>
                     <p className="mt-4 text-xl mb-4">

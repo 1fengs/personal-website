@@ -167,8 +167,8 @@ function CVActions() {
 
 export function About() {
 	return (
-		<section id="about" className="section">
-			<div className="container">
+		<section id="about" className="section-customer">
+			<div className="container-customer">
 				<AboutHeader />
 				<ExperienceCards />
 				{/* <Timeline /> */}
