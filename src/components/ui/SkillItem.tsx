@@ -12,8 +12,8 @@ export default function SkillItem({ skill }: any) {
         group
         p-4
         rounded-xl
-        bg-white/5
-        border border-white/10
+        bg-white/3
+        border border-white/6
         backdrop-blur
         transition
         hover:border-blue-500
@@ -23,7 +23,7 @@ export default function SkillItem({ skill }: any) {
         <div className="flex items-center gap-3 mb-3">
             <Icon className="text-blue-400 text-xl" />
 
-            <span className="text-white text-sm font-medium">
+            <span className="text-white text-lg font-medium">
             {skill.name}
             </span>
         </div>

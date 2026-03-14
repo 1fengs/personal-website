@@ -25,7 +25,7 @@ function AboutHeader() {
 
 			{/* Intro paragraph */}
 			<div className="ml-16 mr-16">
-				<p className="text-white font-semibold leading-relaxed text-justify">
+				<p className="text-white font-semibold leading-relaxed text-justify text-lg">
 					Hi, I'm a software engineer specializing in embedded systems, robotics, and automotive
 					software development. With experience in autonomous driving projects,
 					HiL testing, and Linux-based systems, I enjoy building reliable tools
@@ -41,7 +41,7 @@ function ExperienceCards() {
 	return (
 		<div className="grid grid-cols-3 gap-8">
 
-			<div className="bg-white/5 border border-white/5 backdrop-blur-lg p-8 rounded-xl text-center">
+			<div className="bg-white/2 border border-white/5 backdrop-blur-lg p-8 rounded-xl text-center">
 				<div className="text-4xl font-bold text-blue-400">4+</div>
 				<div className="text-white font-semibold mt-2">Years of Experience</div>
 			</div>

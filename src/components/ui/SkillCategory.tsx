@@ -13,13 +13,13 @@ export default function SkillCategory({ category } : any) {
         className="
         p-10
         rounded-2xl
-        bg-white/5
+        bg-white/2
         backdrop-blur-lg
-        border border-white/10
+        border border-white/5
         shadow-lg
         "
         >
-        <h3 className="text-2xl font-semibold text-white mb-6">
+        <h3 className="text-3xl font-semibold text-white mb-6">
             {category.title}
         </h3>
 
