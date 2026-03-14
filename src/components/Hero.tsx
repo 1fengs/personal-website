@@ -68,7 +68,7 @@ function RotatingRoles() {
     }, [locked]);
 
     return (
-        <div className="h-[60px] flex justify-center overflow-hidden">
+        <div className="min-h-[60px] flex justify-center text-center">
             <AnimatePresence mode="wait">
 
                 <motion.p
@@ -77,7 +77,7 @@ function RotatingRoles() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="text-5xl font-bold text-black text-center"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center"
                 >
                     {roles[index]}
                 </motion.p>
@@ -94,7 +94,7 @@ function BriefIntro() {
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="text-7xl text-black font-bold text-center"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black font-bold text-center"
             >
                 Hello World,<br /> I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Yifeng Shen</span>
             </motion.h1>
@@ -140,7 +140,7 @@ function BriefIntro() {
 
 function ProfilePicture() {
     return (
-        <div className="w-[36rem] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="w-[260px] sm:w-[360px] md:w-[480px] lg:w-[36rem] rounded-2xl overflow-hidden shadow-2xl">
             <ImageWithFallback
                 src="resizedProfilePhoto.jpeg"
                 alt="Workspace"
