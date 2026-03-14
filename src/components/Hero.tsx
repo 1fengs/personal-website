@@ -44,35 +44,27 @@ function SocialLinks() {
 function RotatingRoles() {
 
     const roles = [
-        "Senior Software Engineer",
         "Robotics · Autonomous Driving",
-        "C/C++ · ROS2 · Python"
+        "Test Automation · Component Testing",
+        "C/C++ · ROS2 · Python · Matlab/Simulink",
+        "A Growth-Focused Senior Software Engineer",
     ];
 
     const [index, setIndex] = useState(0);
     const [locked, setLocked] = useState(false);
 
     useEffect(() => {
-
         if (locked) return;
-
         const interval = setInterval(() => {
-
             setIndex((prev) => {
-
                 if (prev === roles.length - 1) {
                     setLocked(true);
-                    return 0; // go back to first and stop
+                    return prev; // go back to first and stop
                 }
-
                 return prev + 1;
-
             });
-
         }, 1500);
-
         return () => clearInterval(interval);
-
     }, [locked]);
 
     return (
