@@ -62,13 +62,7 @@ function ExperienceCards() {
 
 export function About() {
 	return (
-		<section id="about" className="section-customer relative overflow-hidden">
-            <div className="absolute inset-0 -z-10">
-                {/* Background glow */}
-                <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[140px]" />
-                <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-indigo-500/20 rounded-full blur-[120px]" />
-                <div className="absolute top-1/2 left-0 w-[350px] h-[350px] bg-blue-400/15 rounded-full blur-[120px]" />
-            </div>
+		<section id="about" className="section-customer">
 			<div className="container-customer">
 				<AboutHeader />
 				<ExperienceCards />

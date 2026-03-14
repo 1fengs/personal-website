@@ -63,13 +63,14 @@ function SkillCard() {
 
 export function Skills() {
     return (
-        <section id="skills" className="section-customer">
+        <section id="skills" className="section-customer relative overflow-hidden">
+            <div className="absolute inset-0 -z-10">
+                {/* Background glow */}
+                <div className="absolute bottom-0 right-1/4 w-[450px] h-[450px] bg-indigo-500/20 rounded-full blur-[120px]" />
+            </div>
             <div className="container-customer">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl fsont-bold">Skills & Expertise</h2>
-                    <p className="mt-4 text-xl mb-4">
-                        Technologies and tools I excel at, and the areas I specialize in.
-                    </p>
+                    <h2 className="text-6xl font-bold">My Skillset</h2>
                 </div>
                 <SkillCard />
             </div>
