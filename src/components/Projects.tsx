@@ -31,7 +31,7 @@ const projects = [
 
 function ProjectCard() {
     return (
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-8 mb-32">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -90,9 +90,9 @@ function ProjectCard() {
 
 export function Projects() {
     return (
-        <section id="projects" className="flex min-h-screen items-center justify-center">
-            <div className="max-w-7xl mx-auto px-8">
-                <div className="text-center mb-16">
+        <section id="projects" className="section">
+            <div className="container">
+                <div className="text-center mb-16 mt-32">
                     <h2 className="text-4xl font-bold">My Projects</h2>
                     <p className="mt-4 text-xl mb-4">
                         Some of my past work and projects.

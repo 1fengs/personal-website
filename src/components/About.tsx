@@ -1,39 +1,6 @@
 'use client';
 import { ImageWithFallback } from "./ui/ImageWithFallback";
 
-type TimelineItem = {
-	year: string;
-	title: string;
-	description: string;
-};
-
-const timeline: TimelineItem[] = [
-	{
-		year: "2018",
-		title: "Started University",
-		description:
-			"BSc Computer Science with focus on robotics and software engineering.",
-	},
-	{
-		year: "2021",
-		title: "Robotics Research Project",
-		description:
-			"Worked on ROS2-based autonomous navigation systems.",
-	},
-	{
-		year: "2022",
-		title: "Automotive Software Engineer",
-		description:
-			"Developed validation tools and HiL testing systems for autonomous driving.",
-	},
-	{
-		year: "2025",
-		title: "Senior Software Engineer",
-		description:
-			"Focused on embedded systems, Linux environments, and automation.",
-	},
-];
-
 function AboutHeader() {
 	return (
 		<div className="grid grid-cols-[auto_auto_1fr] gap-x-6 items-center mb-16">
@@ -73,7 +40,7 @@ function AboutHeader() {
 
 function ExperienceCards() {
 	return (
-		<div className="grid grid-cols-3 gap-8 mb-20">
+		<div className="grid grid-cols-3 gap-8">
 
 			<div className="bg-white p-8 rounded-xl text-center">
 				<div className="text-4xl font-bold text-blue-600">4+</div>
@@ -200,12 +167,12 @@ function CVActions() {
 
 export function About() {
 	return (
-		<section id="about" className="py-32 bg-blue-50">
-			<div className="max-w-6xl mx-auto px-8">
+		<section id="about" className="section">
+			<div className="container">
 				<AboutHeader />
 				<ExperienceCards />
-				<Timeline />
-				<CVActions />
+				{/* <Timeline /> */}
+				{/* <CVActions /> */}
 			</div>
 		</section>
 	);

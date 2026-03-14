@@ -105,8 +105,8 @@ function ProfilePicture() {
 
 export function Hero() {
     return (
-        <section id="home" className="flex min-h-screen items-center bg-white justify-center">
-            <div className="max-w-7xl mx-auto px-8 py-20">
+        <section id="home" className="home-section">
+            <div className="container">
                 <div className="grid grid-cols-2 gap-12 items-center">
                     <BriefIntro />
                     <ProfilePicture />
