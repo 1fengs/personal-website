@@ -50,8 +50,4 @@ body {
 	.sociallink-button {
 		@apply p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow;
 	}
-
-  .nav-button {
-    @apply text-gray-700 hover:text-blue-700 transition-colors font-semibold cursor-pointer;
-  }
 }
