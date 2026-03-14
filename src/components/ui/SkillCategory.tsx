@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import SkillItem from "./SkillItem";
 
-export default function SkillCategory({ category }) {
+export default function SkillCategory({ category } : any) {
     return (
         <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -24,7 +24,7 @@ export default function SkillCategory({ category }) {
         </h3>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {category.skills.map((skill, i) => (
+            {category.skills.map((skill: any, i:number) => (
             <SkillItem key={i} skill={skill} />
             ))}
         </div>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export default function SkillItem({ skill }) {
+export default function SkillItem({ skill }: any) {
     const Icon = skill.icon;
 
     return (
