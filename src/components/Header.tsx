@@ -7,7 +7,7 @@ export function Header() {
     const [indicatorStyle, setIndicatorStyle] = useState({});
     const [scrolled, setScrolled] = useState(false);
 
-    const navRefs: Record<string, React.RefObject<HTMLButtonElement>> = {
+    const navRefs: Record<string, React.RefObject<HTMLButtonElement | null>> = {
         home: useRef<HTMLButtonElement>(null),
         about: useRef<HTMLButtonElement>(null),
         skills: useRef<HTMLButtonElement>(null),
