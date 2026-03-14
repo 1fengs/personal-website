@@ -7,7 +7,7 @@ function AboutHeader() {
 
 			{/* Photo */}
 			<div className="flex justify-center">
-				<div className="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-400">
+				<div className="w-40 h-40 rounded-full overflow-hidden border-8 border-blue-400">
 					<ImageWithFallback
 						src="aboutMePhoto.jpg"
 						alt="Profile"
@@ -19,7 +19,7 @@ function AboutHeader() {
 			{/* Title */}
 			<div>
 				<h2 className="ml-4 text-5xl font-bold leading-tight text-justify">
-					A bit more<br /> about me
+					A bit more<br />about me
 				</h2>
 			</div>
 
