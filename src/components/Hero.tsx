@@ -77,7 +77,7 @@ function RotatingRoles() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center"
+                    className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black text-center"
                 >
                     {roles[index]}
                 </motion.p>
@@ -94,7 +94,7 @@ function BriefIntro() {
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black font-bold text-center"
+                className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl text-black font-bold text-center"
             >
                 Hello World,<br /> I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Yifeng Shen</span>
             </motion.h1>
@@ -140,7 +140,7 @@ function BriefIntro() {
 
 function ProfilePicture() {
     return (
-        <div className="w-[260px] sm:w-[360px] md:w-[480px] lg:w-[36rem] rounded-2xl overflow-hidden shadow-2xl">
+        <div className="w-[360px] sm:w-[360px] md:w-[480px] lg:w-[36rem] rounded-2xl overflow-hidden shadow-md">
             <ImageWithFallback
                 src="resizedProfilePhoto.jpeg"
                 alt="Workspace"
@@ -153,7 +153,7 @@ function ProfilePicture() {
 export function Hero() {
     return (
         <section id="home" className="section-customer min-h-screen items-center justify-center bg-white">
-            <div className="container-customer">
+            <div className="container-customer mt-16 sm:mt-6 md:mt-14 lg:mt-16">
                 <div className="justify-center">
                     <BriefIntro />
                 </div>

@@ -48,6 +48,6 @@ body {
 /* Reusable ui components */
 @layer components {
 	.sociallink-button {
-		@apply p-3 bg-white rounded-full shadow-md hover:shadow-lg transition-shadow;
+		@apply p-3 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow;
 	}
 }
