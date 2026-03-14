@@ -89,7 +89,7 @@ function RotatingRoles() {
 
 function BriefIntro() {
     return (
-        <div className='space-y-12 flex flex-col items-center'>
+        <div className='space-y-12 flex flex-col items-center mt-2'>
             <motion.h1
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
