@@ -1,78 +1,29 @@
-'use client';
-import { Code, Palette, Smartphone, Database, Globe, Zap } from 'lucide-react';
-
-const skills = [
-    {
-        icon: Code,
-        title: 'Programming',
-        description: 'Proficient in JavaScript, TypeScript, Python, and more.',
-        skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C++'],
-    },
-    {
-        icon: Palette,
-        title: 'Design',
-        description: 'Experienced in UI/UX design and graphic design.',
-        skills: ['Figma', 'Adobe XD', 'Sketch', 'Photoshop', 'Illustrator'],
-    },
-    {
-        icon: Smartphone,
-        title: 'Mobile Development',
-        description: 'Skilled in developing mobile applications.',
-        skills: ['React Native', 'Flutter', 'Swift', 'Kotlin'],
-    },
-    {
-        icon: Database,
-        title: 'Database Management',
-        description: 'Knowledgeable in database design and management.',
-        skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],    
-    }
-];
-
-function SkillCard() {
-    return (
-        <div className="grid grid-cols-3 gap-8">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow"
-            >
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <skill.icon className="text-blue-600" size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {skill.title}
-              </h3>
-              <p className="text-gray-600 mb-4">
-                {skill.description}
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {skill.skills.map((item, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-    );
-}
+"use client";
+import { skillCategories } from "./data/Skillsdata";
+import SkillCategory from "./ui/SkillCategory";
 
 export function Skills() {
-    return (
-        <section id="skills" className="flex min-h-screen items-center justify-center bg-gradient-to-br font-sans">
-            <div className="max-w-7xl mx-auto px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold">Skills & Expertise</h2>
-                    <p className="mt-4 text-xl mb-4">
-                        Technologies and tools I excel at, and the areas I specialize in.
-                    </p>
-                </div>
-                <SkillCard />
-            </div>
-        </section>
-    );
+  return (
+    <section
+      id="skills"
+      className="relative py-32 overflow-hidden"
+    >
+      {/* background glow */}
+      <div className="max-w-6xl mx-auto px-6 relative">
+
+        <div className="text-center mb-20">
+          <h2 className="text-6xl font-bold text-white">
+            My <span className="text-blue-400">Skillset</span>
+          </h2>
+        </div>
+
+        <div className="flex flex-col gap-12">
+          {skillCategories.map((category, index) => (
+            <SkillCategory key={index} category={category} />
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
 }
