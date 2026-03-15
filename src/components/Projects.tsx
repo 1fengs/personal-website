@@ -214,7 +214,7 @@ export function Projects() {
                                     className="flex items-center gap-2 hover:text-blue-400"
                                 >
                                     <ExternalLink size={18} />
-                                    Link
+                                    Visit
                                 </a>
                             )}
 
