@@ -64,7 +64,7 @@ const journey: JourneyItem[] = [
 
 export function Journey() {
     return (
-        <section className="relative section-customer">
+        <section className="section-customer relative">
             <div className="container-customer">
 
                 {/* Title */}

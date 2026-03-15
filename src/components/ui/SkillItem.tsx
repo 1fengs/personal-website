@@ -21,9 +21,9 @@ export default function SkillItem({ skill }: any) {
         "
         >
         <div className="flex items-center gap-3 mb-3">
-            <Icon className="text-blue-400 text-xl" />
+            <Icon className="trd-txt mcolor-txt" />
 
-            <span className="text-white text-lg font-medium">
+            <span className="trd-txt">
             {skill.name}
             </span>
         </div>

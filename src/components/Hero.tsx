@@ -153,7 +153,7 @@ function ProfilePicture() {
 export function Hero() {
     return (
         <section id="home" className="section-customer min-h-screen items-center justify-center bg-white">
-            <div className="container-customer mt-16 sm:mt-6 md:mt-14 lg:mt-16">
+            <div className="container-customer hero-gap">
                 <div className="justify-center">
                     <BriefIntro />
                 </div>

@@ -6,10 +6,9 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="relative py-32 overflow-hidden"
+      className="section-customer"
     >
-      {/* background glow */}
-      <div className="max-w-6xl mx-auto px-6 relative">
+      <div className="container-customer">
 
         <div className="text-center mb-20">
           <h2 className="main-txt font-bold text-white">

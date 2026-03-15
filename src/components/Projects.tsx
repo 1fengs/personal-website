@@ -90,8 +90,8 @@ export function Projects() {
 
                 {/* Header */}
                 <div className="text-center mb-20 mt-32">
-                  <h2 className="text-6xl font-bold text-white">
-                    My <span className="text-blue-400">Projects</span>
+                  <h2 className="main-txt">
+                    My <span className="mcolor-txt">Projects</span>
                   </h2>
                 </div>
 
@@ -116,16 +116,16 @@ export function Projects() {
 
                             {/* Content */}
                             <div className="p-8">
-                                <h3 className="text-3xl font-bold mb-2">
+                                <h3 className="sec-txt mb-2">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-lg">
+                                <p className="body-txt">
                                     {project.description}
                                 </p>
 
                                 <button
-                                    className="mt-4 text-blue-400 font-medium hover:underline"
+                                    className="mcolor-txt trd-txt hover:underline mt-4"
                                 >
                                     View Details →
                                 </button>
@@ -155,30 +155,30 @@ export function Projects() {
                             <X size={24} />
                         </button>
 
-                        <h3 className="text-3xl font-bold mb-4">
+                        <h3 className="sec-txt mb-4">
                             {selectedProject.title}
                         </h3>
 
-                        <p className="mb-6">
+                        <p className="body-txt mb-6">
                             {selectedProject.about}
                         </p>
 
                         <div className="flex items-center gap-3 mb-3">
                           <div className="w-1 h-6 bg-blue-400 rounded"></div>
-                          <div className="text-xl font-semibold">
+                          <div className="trd-txt">
                             About this project
                           </div>
                         </div>
 
                         <div className="w-full rounded bg-white/8 border-white/10 backdrop-blur-lg p-2 mb-6">
-                            <p className="m-2 text-lg">
+                            <p className="body-txt m-2">
                                 {selectedProject.intro}
                             </p>
                         </div>
 
                         <div className="flex items-center gap-3 mb-3">
                           <div className="w-1 h-6 bg-blue-400 rounded"></div>
-                          <div className="text-xl font-semibold">
+                          <div className="trd-txt font-semibold">
                                 Technologies & Tools
                           </div>
                         </div>
@@ -187,7 +187,7 @@ export function Projects() {
                             {selectedProject.technologies.map((tech, i) => (
                                 <span
                                     key={i}
-                                    className="bg-blue-400 px-3 py-1 rounded-full text-sm"
+                                    className="body-txt bg-blue-400 px-3 py-1 rounded-full text-sm"
                                 >
                                     {tech}
                                 </span>

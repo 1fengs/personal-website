@@ -12,8 +12,8 @@ function ContactCards() {
                     <Mail className="text-blue-600" size={22} />
                 </div>
                 <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-sm">
+                    <div className="body-txt font-semibold">Email</div>
+                    <div className="body-txt">
                         evanshen95@gmail.com
                     </div>
                 </div>
@@ -24,8 +24,8 @@ function ContactCards() {
                     <Phone className="text-blue-600" size={22} />
                 </div>
                 <div>
-                    <div className="font-semibold">Phone</div>
-                    <div className="text-sm">
+                    <div className="body-txt font-semibold">Phone</div>
+                    <div className="body-txt text-sm">
                         +49 (0)152 25220284
                     </div>
                 </div>
@@ -36,8 +36,8 @@ function ContactCards() {
                     <MapPin className="text-blue-600" size={22} />
                 </div>
                 <div>
-                    <div className="font-semibold">Location</div>
-                    <div className="text-sm">
+                    <div className="body-txt font-semibold">Location</div>
+                    <div className="body-txt text-sm">
                         Berlin, Germany
                     </div>
                 </div>
@@ -92,11 +92,11 @@ export function Contact() {
             <div className="container-customer">
 
                 <div className="text-center mb-12">
-                    <h2 className="text-6xl font-bold mb-4">
+                    <h2 className="main-txt mb-4">
                         Get <span className="text-blue-400">In Touch</span>
                     </h2>
 
-                    <p className="text-lg max-w-2xl mx-auto">
+                    <p className="body-txt">
                         If you have any questions, want to collaborate,
                         or just want to say hi, feel free to reach out.
                         I'm always open to new opportunities.
@@ -113,7 +113,7 @@ export function Contact() {
                     >
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Name
                             </label>
 
@@ -129,7 +129,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Email
                             </label>
 
@@ -145,7 +145,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Message
                             </label>
 
