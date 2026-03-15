@@ -12,6 +12,7 @@ type Project = {
     technologies: string[];
     github?: string;
     demo?: string;
+    intro: string;
 };
 
 const projects: Project[] = [
@@ -22,6 +23,10 @@ const projects: Project[] = [
         about:
             'Developed ROS2 nodes in C++ for MPC-based trajectory planning. Created mock map data and visualized results using MATLAB. Tested and calibrated an autonomous tractor using Foxglove for real-time visualization.',
         technologies: ['C++', 'ROS2', 'CasADi', 'MATLAB', 'Foxglove'],
+        intro:
+            'This is an intro',
+        demo: 'https://github.com',
+        github: 'https://github.com',
     },
     {
         title: 'Linux OS Test Automation',
@@ -30,6 +35,8 @@ const projects: Project[] = [
         about:
             'Designed test cases based on system requirements using CodeBeamer and automated testing with Robot Framework on Ubuntu. Documented results, reported defects, and maintained automated tests within an agile Scrum team.',
         technologies: ['Robot Framework', 'Ubuntu', 'CodeBeamer', 'Python'],
+        intro:
+            'This is an intro',
     },
     {
         title: 'Elevator HiL Test Automation',
@@ -38,6 +45,8 @@ const projects: Project[] = [
         about:
             'Developed a Python Tkinter application to parse serial data and interact with CANoe via pywin32. Implemented a Python-MATLAB-CANoe interface over TCP/IP and automated Simulink test model generation from Excel.',
         technologies: ['Python', 'Tkinter', 'MATLAB', 'CANoe', 'Simulink'],
+        intro:
+            'This is an intro',
     },
     {
         title: 'RFID Connector Prototype',
@@ -46,6 +55,8 @@ const projects: Project[] = [
         about:
             'Designed and prototyped a software application using Figma for an RFID-based connector product. Contributed to data labeling for a machine learning project related to golf training.',
         technologies: ['Figma', 'UX Design', 'Machine Learning'],
+        intro:
+            'This is an intro',
     },
     {
         title: 'IEC 61850 XMPP Communication',
@@ -55,6 +66,8 @@ const projects: Project[] = [
             'Analyzed the mapping of IEC 61850 ASCI models and services into XMPP. Extended the open-source C library libiec61850 and implemented XMPP services to enable communication between systems.',
         technologies: ['C', 'IEC 61850', 'XMPP', 'Networking'],
         github: 'https://github.com',
+        intro:
+            'This is an intro',
     },
     {
         title: 'NXP Intelligent Car Challenge',
@@ -63,6 +76,8 @@ const projects: Project[] = [
         about:
             'Programmed Kinetis K60 (ARM Cortex-M4) to process camera data and control motors and servo systems for autonomous navigation in a university robotics competition.',
         technologies: ['Embedded C', 'ARM Cortex-M4', 'Image Processing'],
+        intro:
+            'This is an intro',
     },
 ];
 
@@ -75,24 +90,23 @@ export function Projects() {
 
                 {/* Header */}
                 <div className="text-center mb-20 mt-32">
-                    <h2 className="text-4xl font-bold">Projects</h2>
-                    <p className="text-xl mt-4 text-gray-600">
-                        Selected engineering and software projects
-                    </p>
+                  <h2 className="text-6xl font-bold text-white">
+                    My <span className="text-blue-400">Projects</span>
+                  </h2>
                 </div>
 
                 {/* Card Stack */}
-                <div className="flex flex-col gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                     {projects.map((project, index) => (
                         <div
                             key={index}
                             onClick={() => setSelectedProject(project)}
-                            className="group cursor-pointer rounded-2xl overflow-hidden bg-white border border-gray-200 shadow-md hover:shadow-xl transition-all"
+                            className="group cursor-pointer rounded-2xl overflow-hidden bg-white/2 border border-white/5 backdrop-blur transition-all"
                         >
 
                             {/* Image */}
-                            <div className="aspect-[16/7] overflow-hidden">
+                            <div className="aspect-video overflow-hidden">
                                 <ImageWithFallback
                                     src={project.image}
                                     alt={project.title}
@@ -102,16 +116,16 @@ export function Projects() {
 
                             {/* Content */}
                             <div className="p-8">
-                                <h3 className="text-2xl font-semibold mb-2">
+                                <h3 className="text-3xl font-bold mb-2">
                                     {project.title}
                                 </h3>
 
-                                <p className="text-gray-600">
+                                <p className="text-lg">
                                     {project.description}
                                 </p>
 
                                 <button
-                                    className="mt-4 text-blue-600 font-medium hover:underline"
+                                    className="mt-4 text-blue-400 font-medium hover:underline"
                                 >
                                     View Details →
                                 </button>
@@ -121,18 +135,22 @@ export function Projects() {
                     ))}
 
                 </div>
+                {/* footnote */}
+                <div className="text-right bottom-2 right-2 text-[12px] text-gray-400">
+                    * All project photos in this page are generated by AI
+                </div>
             </div>
 
             {/* Modal */}
             {selectedProject && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
 
-                    <div className="bg-white rounded-2xl max-w-2xl w-full p-8 relative shadow-xl">
+                    <div className="bg-black/90 border border-blue-400/80 rounded-2xl max-w-4xl w-full p-8 relative">
 
                         {/* Close */}
                         <button
                             onClick={() => setSelectedProject(null)}
-                            className="absolute right-6 top-6 text-gray-500 hover:text-black"
+                            className="absolute right-6 top-6 text-white hover:text-black"
                         >
                             <X size={24} />
                         </button>
@@ -141,19 +159,35 @@ export function Projects() {
                             {selectedProject.title}
                         </h3>
 
-                        <p className="text-gray-700 mb-6">
+                        <p className="mb-6">
                             {selectedProject.about}
                         </p>
 
-                        <h4 className="font-semibold mb-2">
-                            Technologies & Tools
-                        </h4>
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-1 h-6 bg-blue-400 rounded"></div>
+                          <div className="text-xl font-semibold">
+                            About this project
+                          </div>
+                        </div>
+
+                        <div className="w-full rounded bg-white/8 border-white/10 backdrop-blur-lg p-2 mb-6">
+                            <p className="m-2 text-lg">
+                                {selectedProject.intro}
+                            </p>
+                        </div>
+
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="w-1 h-6 bg-blue-400 rounded"></div>
+                          <div className="text-xl font-semibold">
+                                Technologies & Tools
+                          </div>
+                        </div>
 
                         <div className="flex flex-wrap gap-2 mb-6">
                             {selectedProject.technologies.map((tech, i) => (
                                 <span
                                     key={i}
-                                    className="px-3 py-1 bg-gray-100 rounded-full text-sm"
+                                    className="bg-blue-400 px-3 py-1 rounded-full text-sm"
                                 >
                                     {tech}
                                 </span>
@@ -166,7 +200,7 @@ export function Projects() {
                                 <a
                                     href={selectedProject.github}
                                     target="_blank"
-                                    className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
+                                    className="flex items-center gap-2 hover:text-blue-400"
                                 >
                                     <Github size={18} />
                                     Code
@@ -177,10 +211,10 @@ export function Projects() {
                                 <a
                                     href={selectedProject.demo}
                                     target="_blank"
-                                    className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
+                                    className="flex items-center gap-2 hover:text-blue-400"
                                 >
                                     <ExternalLink size={18} />
-                                    Demo
+                                    Link
                                 </a>
                             )}
 
