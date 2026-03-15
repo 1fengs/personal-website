@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 export function Footer() {
     return (
-        <footer className="section-customer">
+        <footer className="section-customer pb-2">
             <div className="container-customer border-t border-gray-700 pt-10 pb-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center md:text-left">
 
