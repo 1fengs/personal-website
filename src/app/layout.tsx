@@ -21,6 +21,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Yifeng Shen",
   description: "Yifeng Shen's personal website, showcasing my work and skills.",
+  icons:{ icon:"favicon.ico" }
 };
 
 export default function RootLayout({
