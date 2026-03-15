@@ -12,7 +12,7 @@ export function Skills() {
       <div className="max-w-6xl mx-auto px-6 relative">
 
         <div className="text-center mb-20">
-          <h2 className="text-6xl font-bold text-white">
+          <h2 className="main-txt font-bold text-white">
             My <span className="text-blue-400">Skillset</span>
           </h2>
         </div>

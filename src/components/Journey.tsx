@@ -73,7 +73,7 @@ export function Journey() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-6xl font-bold text-white text-center mb-16"
+                    className="main-txt text-center mb-16"
                 >
                     My <span className="text-blue-400">Journey</span>
                 </motion.h2>
@@ -140,20 +140,20 @@ export function Journey() {
                                         <div className="relative">
 
                                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                <h3 className="text-3xl text-white font-semibold">
+                                                <h3 className="sec-txt text-white font-semibold">
                                                     {item.title}
                                                 </h3>
 
-                                                <span className="text-lg text-white/90">
+                                                <span className="body-txt text-white/90">
                                                     {item.period}
                                                 </span>
                                             </div>
 
-                                            <p className="text-blue-400 font-semibold text-2xl mb-2">
+                                            <p className="trd-txt text-blue-400 mb-2">
                                                 {item.organization}
                                             </p>
 
-                                            <p className="text-neutral-300 text-lg leading-relaxed">
+                                            <p className="text-neutral-300 body-txt leading-relaxed">
                                                 {item.description}
                                             </p>
 
