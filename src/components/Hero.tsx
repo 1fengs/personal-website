@@ -47,7 +47,7 @@ function RotatingRoles() {
         "Robotics · Autonomous Driving",
         "Test Automation · Component Testing",
         "C/C++ · ROS2 · Python · Matlab/Simulink",
-        "A Growth-Focused Senior Software Engineer",
+        "A Growth-Focused Software Engineer",
     ];
 
     const [index, setIndex] = useState(0);

@@ -89,7 +89,7 @@ export function Projects() {
             <div className="container-customer">
 
                 {/* Header */}
-                <div className="text-center mb-20 mt-32">
+                <div className="text-center mb-20">
                   <h2 className="main-txt">
                     My <span className="mcolor-txt">Projects</span>
                   </h2>

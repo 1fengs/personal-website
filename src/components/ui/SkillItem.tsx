@@ -21,9 +21,9 @@ export default function SkillItem({ skill }: any) {
         "
         >
         <div className="flex items-center gap-3 mb-3">
-            <Icon className="trd-txt mcolor-txt" />
+            <Icon className="body-txt mcolor-txt" />
 
-            <span className="trd-txt">
+            <span className="body-txt">
             {skill.name}
             </span>
         </div>
@@ -34,7 +34,7 @@ export default function SkillItem({ skill }: any) {
             <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: `${skill.level}%` }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.5 }}
             className="bg-blue-400 h-1.5 rounded-full"
             />
         </div>

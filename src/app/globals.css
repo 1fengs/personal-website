@@ -56,23 +56,23 @@ body {
 	}
 
     .hero-txt{
-        @apply text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl font-bold;
+        @apply text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl font-black;
     }
 
     .main-txt{
-        @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-bold;
+        @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-extrabold;
     }
 
     .sec-txt{
-        @apply text-2xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold;
+        @apply text-xl sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-2xl font-bold;
     }
 
     .trd-txt{
-        @apply text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-semibold;
+        @apply text-lg sm:text-lg md:text-lg lg:text-lg xl:text-xl 2xl:text-xl font-semibold;
     }
 
     .body-txt{
-        @apply text-lg sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl;
+        @apply text-base sm:text-base md:text-base lg:text-base xl:text-lg 2xl:text-lg font-normal;
     }
 
     /* main theme color of text */

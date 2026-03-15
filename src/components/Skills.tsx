@@ -16,7 +16,7 @@ export function Skills() {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-6">
           {skillCategories.map((category, index) => (
             <SkillCategory key={index} category={category} />
           ))}
