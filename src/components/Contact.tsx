@@ -55,18 +55,24 @@ export function Contact() {
         message: ''
     });
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
+
         e.preventDefault();
 
-        console.log('Form submitted:', formData);
-
-        alert('Thank you for your message!');
-
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
+        const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
         });
+
+        if (res.ok) {
+            alert("Message sent!");
+            setFormData({ name: '', email: '', message: '' });
+        } else {
+            alert("Something went wrong.");
+        }
     };
 
     const handleChange = (
@@ -162,7 +168,7 @@ export function Contact() {
                                 className="hidden"
                             />
                         </div>
-                        
+
                         <button
                             type="submit"
                             className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
