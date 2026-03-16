@@ -65,14 +65,14 @@ export function Header() {
     }, [activeSection]);
 
     return (
-        <header className="fixed top-4 w-full flex flex-col items-center justify-center z-50 ">
+        <header className="fixed md:top-4 lg:top-4 xl:top-4 2xl:top-4 w-full flex flex-col items-center justify-center z-50 ">
             <nav 
                 className={`relative flex items-center justify-between transition-all duration-300
-                    ${scrolled? "h-6 sm:h-6 md:h-10 lg:h-14 xl:h-14 2xl:h-14 max-w-4xl": "h-8 sm:h-8 md:h-12 lg:h-16 xl:h-16 2xl:h-16 max-w-6xl"}
-                    w-full bg-white/70 backdrop-blur-lg rounded-full shadow-sm px-6`}
+                    ${scrolled? "h-10 sm:h-10 md:h-10 lg:h-14 xl:h-14 2xl:h-14 max-w-4xl": "h-12 sm:h-12 md:h-12 lg:h-16 xl:h-16 2xl:h-16 max-w-6xl"}
+                    w-full bg-white/40 backdrop-blur-lg md:rounded-full lg:rounded-full xl:rounded-full 2xl:rounded-full shadow-sm px-6`}
             >
                 {/* Logo, Name */}
-                <div className="text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg 2xl:text-lg font-semibold text-gray-900">
+                <div className="text-sm sm:text-sm md:text-md lg:text-lg xl:text-lg 2xl:text-lg font-bold text-gray-900">
                     Yifeng Shen
                 </div> 
                 
@@ -132,7 +132,7 @@ export function Header() {
                     <button
                         key={section}
                         onClick={() => scrollToSection(section)}
-                        className="text-gray-700 hover:text-blue-700"
+                        className="text-black font-semi-bold hover:text-blue-700"
                     >
                         {section.charAt(0).toUpperCase() + section.slice(1)}
                     </button>

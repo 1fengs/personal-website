@@ -118,10 +118,10 @@ function BriefIntro() {
 
                 <div className="flex space-x-4">
                     <button
-                        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-8 py-3 bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="px-8 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
                     >
-                    View My Portfolio    
+                    Get in Touch    
                     </button>
                 </div>
             </motion.div>
