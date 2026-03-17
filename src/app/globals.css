@@ -6,8 +6,8 @@
 
 /* Theme variables */
 :root {
-    --background: #171717;
-    --foreground: #ffffff;
+    --background: #000000;
+    --foreground: #F2F2F2;
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -36,16 +36,16 @@ body {
 @layer components {
 	/* page section */
 	.section-customer {
-		@apply py-5 sm:py-5 md:py-8 lg:py-16 xl:py-16 2xl:py-16 overflow-hidden;
+		@apply py-5 sm:py-5 md:py-8 lg:py-16 overflow-hidden;
 	}
 
 	/* max width container */
 	.container-customer {
-		@apply max-w-7xl mx-auto p-5 sm:p-5 md:p-8 lg:p-10 xl:p-10 2xl:p-10;
+		@apply max-w-7xl mx-auto p-5 sm:p-5 md:p-8 lg:p-10;
 	}
 
     .hero-gap {
-        @apply mt-10 sm:mt-10 md:mt-14 lg:mt-16 xl:mt-16 2xl:mt-16;
+        @apply mt-10 sm:mt-10 md:mt-14 lg:mt-16;
     }
 }
 
@@ -56,23 +56,23 @@ body {
 	}
 
     .hero-txt{
-        @apply text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-7xl font-black;
+        @apply text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-black;
     }
 
     .main-txt{
-        @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-extrabold;
+        @apply text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold;
     }
 
     .sec-txt{
-        @apply text-xl sm:text-xl md:text-xl lg:text-xl xl:text-2xl 2xl:text-2xl font-bold;
+        @apply text-xl sm:text-xl md:text-xl lg:text-xl font-bold;
     }
 
     .trd-txt{
-        @apply text-lg sm:text-lg md:text-lg lg:text-lg xl:text-xl 2xl:text-xl font-semibold;
+        @apply text-lg sm:text-lg md:text-lg lg:text-lg font-semibold;
     }
 
     .body-txt{
-        @apply text-base sm:text-base md:text-base lg:text-base xl:text-lg 2xl:text-lg font-normal;
+        @apply text-base sm:text-base md:text-base lg:text-base font-normal;
     }
 
     /* main theme color of text */
@@ -83,5 +83,17 @@ body {
     /* main theme color of non-color */
     .mcolor-bg{
         @apply bg-blue-600;
+    }
+
+    .bgcolor-light{
+        @apply bg-[#F2F2F2]
+    }
+
+    .bgcolor-dark{
+        @apply bg-[#BFBFBF]
+    }
+
+    .subtle-blur-card{
+        @apply bg-neutral-100/8 shadow-lg backdrop-blur-lg p-8 rounded-xl;
     }
 }

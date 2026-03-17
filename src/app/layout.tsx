@@ -34,14 +34,6 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased relative overflow-x-hidden`}
       >
-        {/* GLOBAL BACKGROUND GLOW */}
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-
-          <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-[160px]" />
-
-          <div className="absolute bottom-[10%] right-[15%] w-[500px] h-[500px] bg-indigo-500/20 rounded-full blur-[140px]" />
-
-        </div>
         {children}
       </body>
     </html>

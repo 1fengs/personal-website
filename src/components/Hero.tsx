@@ -47,7 +47,7 @@ function RotatingRoles() {
         "Robotics · Autonomous Driving",
         "Test Automation · Component Testing",
         "C/C++ · ROS2 · Python · Matlab/Simulink",
-        "A Growth-Focused Software Engineer",
+        "A Growth-Focused Senior Software Engineer",
     ];
 
     const [index, setIndex] = useState(0);
@@ -119,7 +119,7 @@ function BriefIntro() {
                 <div className="flex space-x-4">
                     <button
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-8 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
+                        className="px-2 sm:px-2 md:px-6 lg:px-8 xl:px-8 2xl:px-8 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
                     >
                     Get in Touch    
                     </button>
@@ -152,7 +152,7 @@ function ProfilePicture() {
 
 export function Hero() {
     return (
-        <section id="home" className="section-customer min-h-screen items-center justify-center bg-white">
+        <section id="home" className="section-customer min-h-screen items-center justify-center bg-neutral-100">
             <div className="container-customer hero-gap">
                 <div className="justify-center">
                     <BriefIntro />

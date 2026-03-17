@@ -2,42 +2,52 @@
 
 import { motion } from "framer-motion";
 
+const levelStyles: any = {
+  expert:
+    "bg-blue-500/20 text-blue-400 border-blue-500/30",
+  advanced:
+    "bg-cyan-500/20 text-cyan-400 border-cyan-500/30",
+  intermediate:
+    "bg-violet-500/20 text-violet-400 border-violet-500/30",
+  basic:
+    "bg-neutral-500/20 text-neutral-400 border-neutral-500/30",
+};
+
 export default function SkillItem({ skill }: any) {
-    const Icon = skill.icon;
+  const Icon = skill.icon;
 
-    return (
-        <motion.div
-        whileHover={{ scale: 1.05 }}
-        className="
-        group
-        p-4
-        rounded-xl
-        bg-white/3
-        border border-white/6
-        backdrop-blur
-        transition
-        hover:border-blue-500
-        hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]
-        "
-        >
-        <div className="flex items-center gap-3 mb-3">
-            <Icon className="body-txt mcolor-txt" />
+  return (
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      className="
+      p-4
+      rounded-xl
+      bg-white/4
+      border border-white/8
+      backdrop-blur
+      transition
+      hover:border-blue-500
+      hover:shadow-[0_0_25px_rgba(59,130,246,0.35)]
+      "
+    >
+      <div className="flex flex-col grid grid-rows-3 gap-1 items-center justify-center">
 
-            <span className="body-txt">
+        <div className="flex w-fit mx-auto overflow-hidden">
+          <Icon className="sec-txt mcolor-txt" />
+        </div>
+                  
+        <div className="font-sm flex items-center justify-center overflow-hidden">
             {skill.name}
-            </span>
         </div>
 
-        {/* progress bar */}
-
-        <div className="w-full bg-neutral-800 rounded-full h-1.5">
-            <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: `${skill.level}%` }}
-            transition={{ duration: 0.5 }}
-            className="bg-blue-400 h-1.5 rounded-full"
-            />
+        <div className={`mx-auto w-fit overflow-hidden text-xs px-2 py-1 rounded-full border capitalize
+          ${levelStyles[skill.level]}
+          `}
+        >
+          {skill.level}
         </div>
-        </motion.div>
-    );
+
+      </div>
+    </motion.div>
+  );
 }

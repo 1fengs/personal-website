@@ -11,25 +11,23 @@ export default function SkillCategory({ category }: any) {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
         className="
-        p-6
-        rounded-2xl
-        bg-white/2
-        backdrop-blur-lg
-        border border-white/5
-        shadow-lg
+        p-4
         "
     >
-        <h3 className="sec-txt mb-6">
-            {category.title}
-        </h3>
+        <div className="flex items-center gap-3 mb-3">
+            <div className="w-1 h-6 bg-blue-400 rounded"></div>
+            <div className="trd-txt">
+                {category.title}
+                </div>
+            </div>
 
         <div className="
             grid
-            grid-cols-2
-            md:grid-cols-2
-            lg:grid-cols-4
-            xl:grid-cols-4
-            2xl:grid-cols-4
+            grid-cols-3
+            md:grid-cols-4
+            lg:grid-cols-5
+            xl:grid-cols-6
+            2xl:grid-cols-6
             gap-4
         ">
             {category.skills.map((skill: any, i: number) => (

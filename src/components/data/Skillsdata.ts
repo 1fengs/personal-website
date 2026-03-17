@@ -38,72 +38,76 @@ import {
 import { 
     FaCarOn 
 } from "react-icons/fa6";
+import { 
+    PiComputerTowerFill 
+} from "react-icons/pi";
 
 export const skillCategories = [
     {
         title: "Programming Languages",
         skills: [
-        { name: "C", icon: SiC, level: 95 },
-        { name: "C++", icon: SiCplusplus, level: 95 },
-        { name: "Python", icon: SiPython, level: 80 },
-        { name: "Assembly", icon: SiC, level: 30 },
-        { name: "Typescript", icon: SiTypescript, level: 45 },
+        { name: "C", icon: SiC, level: "expert" },
+        { name: "C++", icon: SiCplusplus, level: "expert" },
+        { name: "Python", icon: SiPython, level: "advanced" },
+        { name: "Assembly", icon: SiC, level: "basic" },
+        { name: "Typescript", icon: SiTypescript, level: "basic" },
         ]
     },
     {
         title: "Robotics & Automotive",
         skills: [
-        { name: "ROS2", icon: SiRos, level: 85 },
-        { name: "CANoe", icon: TbRulerMeasure, level: 70 },
-        { name: "AUTOSAR", icon: FaCar, level: 50 },
-        { name: "CasADi", icon: SiCplusplus, level: 90 },
-        { name: "Foxglove", icon: FaCarOn, level: 40 }
+        { name: "ROS2", icon: SiRos, level: "expert" },
+        { name: "CANoe", icon: TbRulerMeasure, level: "intermediate" },
+        { name: "AUTOSAR", icon: FaCar, level: "intermediate" },
+        { name: "CasADi", icon: SiCplusplus, level: "expert" },
+        { name: "Foxglove", icon: FaCarOn, level: "basic" },
+        { name: "PLC", icon: PiComputerTowerFill, level: "basic" },
         ]
     },
     {
         title: "Testing & Validation",
         skills: [
-        { name: "Robot Framework", icon: SiRobotframework, level: 85 },
-        { name: "CodeBeamer", icon: IoDocumentText, level: 80 },
-        { name: "Simulink", icon: PiMathOperationsFill, level: 90 },
-        { name: "Matlab", icon: PiMathOperationsFill, level: 90 }
+        { name: "Robot Framework", icon: SiRobotframework, level: "expert" },
+        { name: "CodeBeamer", icon: IoDocumentText, level: "expert" },
+        { name: "Simulink", icon: PiMathOperationsFill, level: "expert" },
+        { name: "Matlab", icon: PiMathOperationsFill, level: "expert" }
         ]
     },
     {
         title: "Tools & Dev Environment",
         skills: [
-        { name: "Git", icon: SiGit, level: 100 },
-        { name: "Ubuntu", icon: SiUbuntu, level: 90 },
-        { name: "VS Code", icon: VscVscode, level: 100 },
-        { name: "JIRA", icon: SiJira, level: 100 },
-        { name: "Confluence", icon: SiConfluence, level: 100 }
+        { name: "Git", icon: SiGit, level: "expert" },
+        { name: "Ubuntu", icon: SiUbuntu, level: "expert" },
+        { name: "VS Code", icon: VscVscode, level: "expert" },
+        { name: "JIRA", icon: SiJira, level: "expert" },
+        { name: "Confluence", icon: SiConfluence, level: "expert" }
         ]
     },
     {
         title: "Build & CI/CD",
         skills: [
-        { name: "CMake", icon: SiCmake, level: 60 },
-        { name: "Docker", icon: SiDocker, level: 70 },
-        { name: "Jenkins", icon: SiJenkins, level: 70 },
-        { name: "Vercel", icon: SiVercel, level: 50 },
+        { name: "CMake", icon: SiCmake, level: "intermediate" },
+        { name: "Docker", icon: SiDocker, level: "intermediate" },
+        { name: "Jenkins", icon: SiJenkins, level: "advanced" },
+        { name: "Vercel", icon: SiVercel, level: "basic" },
         ]
     },
         {
         title: "Languages",
         skills: [
-        { name: "Mandarin", icon: IoLanguage, level: 100 },
-        { name: "English", icon: IoLanguage, level: 95 },
-        { name: "German", icon: IoLanguage, level: 67 },
+        { name: "Mandarin", icon: IoLanguage, level: "expert" },
+        { name: "English", icon: IoLanguage, level: "expert" },
+        { name: "German", icon: IoLanguage, level: "advanced" },
         ]
     },
         {
         title: "Web Development",
         skills: [
-        { name: "Next.js", icon: SiJavascript, level: 50 },
-        { name: "React", icon: SiReact, level: 45 },
-        { name: "Tailwind CSS", icon: SiTailwindcss, level: 60 },
-        { name: "HTML5", icon: SiHtml5, level: 70 },
-        { name: "CSS3", icon: SiCss, level: 70 },
+        { name: "Next.js", icon: SiJavascript, level: "basic" },
+        { name: "React", icon: SiReact, level: "basic" },
+        { name: "Tailwind CSS", icon: SiTailwindcss, level: "basic" },
+        { name: "HTML5", icon: SiHtml5, level: "intermediate" },
+        { name: "CSS3", icon: SiCss, level: "intermediate" },
         ]
     }
 ];
