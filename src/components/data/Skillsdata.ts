@@ -44,6 +44,14 @@ import {
 
 export const skillCategories = [
     {
+        title: "Languages",
+        skills: [
+        { name: "Mandarin", icon: IoLanguage, level: "expert" },
+        { name: "English", icon: IoLanguage, level: "expert" },
+        { name: "German", icon: IoLanguage, level: "advanced" },
+        ]
+    },
+    {
         title: "Programming Languages",
         skills: [
         { name: "C", icon: SiC, level: "expert" },
@@ -57,9 +65,9 @@ export const skillCategories = [
         title: "Robotics & Automotive",
         skills: [
         { name: "ROS2", icon: SiRos, level: "expert" },
+        { name: "CasADi", icon: SiCplusplus, level: "expert" },
         { name: "CANoe", icon: TbRulerMeasure, level: "intermediate" },
         { name: "AUTOSAR", icon: FaCar, level: "intermediate" },
-        { name: "CasADi", icon: SiCplusplus, level: "expert" },
         { name: "Foxglove", icon: FaCarOn, level: "basic" },
         { name: "PLC", icon: PiComputerTowerFill, level: "basic" },
         ]
@@ -86,28 +94,20 @@ export const skillCategories = [
     {
         title: "Build & CI/CD",
         skills: [
+        { name: "Jenkins", icon: SiJenkins, level: "advanced" },
         { name: "CMake", icon: SiCmake, level: "intermediate" },
         { name: "Docker", icon: SiDocker, level: "intermediate" },
-        { name: "Jenkins", icon: SiJenkins, level: "advanced" },
         { name: "Vercel", icon: SiVercel, level: "basic" },
-        ]
-    },
-        {
-        title: "Languages",
-        skills: [
-        { name: "Mandarin", icon: IoLanguage, level: "expert" },
-        { name: "English", icon: IoLanguage, level: "expert" },
-        { name: "German", icon: IoLanguage, level: "advanced" },
         ]
     },
         {
         title: "Web Development",
         skills: [
+        { name: "HTML5", icon: SiHtml5, level: "intermediate" },
+        { name: "CSS3", icon: SiCss, level: "intermediate" },
         { name: "Next.js", icon: SiJavascript, level: "basic" },
         { name: "React", icon: SiReact, level: "basic" },
         { name: "Tailwind CSS", icon: SiTailwindcss, level: "basic" },
-        { name: "HTML5", icon: SiHtml5, level: "intermediate" },
-        { name: "CSS3", icon: SiCss, level: "intermediate" },
         ]
     }
 ];

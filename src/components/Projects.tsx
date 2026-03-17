@@ -85,18 +85,18 @@ export function Projects() {
     const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
     return (
-        <section id="projects" className="section-customer">
+        <section id="projects" className="section-customer mt-10">
             {/* Header */}
             <div className="text-center mb-12 md:mb-16">
                 <h2 className="main-txt mb-8">
                     My Projects
                 </h2>
                 <p className="body-txt text-gray-400">
-                    Check out how I change the world around me
+                    Check out how I have changed the world around me
                 </p>
             </div>
 
-            <div className="m-2 md:m-10 bgcolor-light rounded-2xl">
+            <div className="m-2 md:m-10 bgcolor-dark rounded-2xl">
             <div className="container-customer">
 
                 {/* Card Stack */}
@@ -106,7 +106,7 @@ export function Projects() {
                         <div
                             key={index}
                             onClick={() => setSelectedProject(project)}
-                            className="p-2 md:p-4 group shadow-lg cursor-pointer rounded-lg overflow-hidden bg-white transition-all flex flex-row md:flex-col"
+                            className="p-2 md:p-4 group shadow-lg cursor-pointer rounded-lg overflow-hidden bgcolor-light transition-all flex flex-row md:flex-col"
                         >
 
                             {/* Image */}
@@ -121,7 +121,7 @@ export function Projects() {
                             {/* Content */}
                             <div className= "flex flex-col w-full">
                             <div className="flex flex-col max-w-[60%] md:max-w-full mx-4 md:mx-0 md:mt-4 text-left overflow-hidden">
-                                <h3 className="text-md md:text-3xl font-bold mb-2 md:mb-6 text-black">
+                                <h3 className="text-md md:text-2xl font-bold mb-2 md:mb-6 text-black">
                                     {project.title}
                                 </h3>
                             </div>
@@ -137,8 +137,8 @@ export function Projects() {
                                     </span>
                                 ))}
                                 {project.technologies.length > 3 && (
-                                    <span className="text-[10px] md:text-xs py-0.5 text-gray-600">
-                                        +{project.technologies.length - 3}
+                                    <span className="text-[10px] md:text-xs px-2 py-0.5 border border-gray-600 text-gray-600 rounded-full">
+                                        + more
                                     </span>
                                 )}
                             </div>

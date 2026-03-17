@@ -4,36 +4,48 @@ import { motion } from "framer-motion";
 import SkillItem from "./SkillItem";
 
 export default function SkillCategory({ category }: any) {
+  const CategoryIcon = category.icon;
+
   return (
     <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="
-        p-4
-        "
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="
+        p-2
+        md:p-4
+        rounded-2xl
+        bgcolor-light
+        border border-white/10
+        backdrop-blur-md
+      "
     >
-        <div className="flex items-center gap-3 mb-3">
-            <div className="w-1 h-6 bg-blue-400 rounded"></div>
-            <div className="trd-txt">
-                {category.title}
-                </div>
-            </div>
+      {/* Header */}
+      <div className="flex items-center gap-3 mb-2 md:mb-4">
 
-        <div className="
-            grid
-            grid-cols-3
-            md:grid-cols-4
-            lg:grid-cols-5
-            xl:grid-cols-6
-            2xl:grid-cols-6
-            gap-4
-        ">
-            {category.skills.map((skill: any, i: number) => (
-            <SkillItem key={i} skill={skill} />
-            ))}
-        </div>
+        {CategoryIcon && (
+          <CategoryIcon className="w-5 h-5 text-white/60" />
+        )}
+        {/* <div className="w-1 h-6 bg-blue-400 rounded"></div> */}
+        <h3 className="tex-sm md:text-lg font-bold text-black">
+          {category.title}
+        </h3>
+      </div>
+
+      {/* Grid */}
+      <div
+        className="
+          grid
+          grid-cols-[repeat(auto-fill,minmax(100px,1fr))]
+          md:grid-cols-6
+          gap-4
+        "
+      >
+        {category.skills.map((skill: any, i: number) => (
+          <SkillItem key={i} skill={skill} />
+        ))}
+      </div>
     </motion.div>
   );
 }
