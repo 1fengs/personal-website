@@ -41,7 +41,7 @@ body {
 
 	/* max width container */
 	.container-customer {
-		@apply max-w-7xl mx-auto p-5 sm:p-5 md:p-8 lg:p-10;
+		@apply max-w-7xl mx-auto p-4 md:p-10;
 	}
 
     .hero-gap {

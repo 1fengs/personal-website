@@ -96,7 +96,7 @@ export function Projects() {
                 </p>
             </div>
 
-            <div className="mx-4 md:mx-10 p-2 md:p-10 bgcolor-light rounded-2xl">
+            <div className="m-2 md:m-10 bgcolor-light rounded-2xl">
             <div className="container-customer">
 
                 {/* Card Stack */}
@@ -106,7 +106,7 @@ export function Projects() {
                         <div
                             key={index}
                             onClick={() => setSelectedProject(project)}
-                            className="p-4 group shadow-lg cursor-pointer rounded-lg overflow-hidden bg-white transition-all flex flex-row md:flex-col"
+                            className="p-2 md:p-4 group shadow-lg cursor-pointer rounded-lg overflow-hidden bg-white transition-all flex flex-row md:flex-col"
                         >
 
                             {/* Image */}
@@ -120,8 +120,8 @@ export function Projects() {
 
                             {/* Content */}
                             <div className= "flex flex-col w-full">
-                            <div className="flex flex-col max-w-[60%] mx-4 md:mx-0 md:mt-4 text-left overflow-hidden">
-                                <h3 className="sec-txt mb-2 text-black">
+                            <div className="flex flex-col max-w-[60%] md:max-w-full mx-4 md:mx-0 md:mt-4 text-left overflow-hidden">
+                                <h3 className="text-md md:text-3xl font-bold mb-2 text-black">
                                     {project.title}
                                 </h3>
                             </div>
