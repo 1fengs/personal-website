@@ -43,17 +43,17 @@ function ExperienceCards() {
 
 
                 <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-bold">4+</div>
+                    <div className="text-3xl lg:text-5xl font-bold">4+</div>
                     <div className="body-txt mt-2">Years of Experience</div>
                 </div>
 
                 <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-bold">8</div>
+                    <div className="text-3xl lg:text-5xl font-bold">8</div>
                     <div className="body-txt mt-2">Projects Delivered</div>
                 </div>
 
                 <div className="text-left">
-                    <div className="text-4xl lg:text-5xl font-bold">Master</div>
+                    <div className="text-3xl lg:text-5xl font-bold">Master</div>
                     <div className="body-txt mt-2">Degree Obtained</div>
                 </div>
 
