@@ -36,7 +36,7 @@ body {
 @layer components {
 	/* page section */
 	.section-customer {
-		@apply py-5 sm:py-5 md:py-8 lg:py-16 overflow-hidden;
+		@apply py-5 md:py-8 overflow-hidden;
 	}
 
 	/* max width container */
