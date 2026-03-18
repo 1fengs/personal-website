@@ -64,11 +64,11 @@ const journey: JourneyItem[] = [
 
 export function Journey() {
     return (
-        <section className="section-customer relative">
+        <section className="section-customer relative p-2">
             <div className="container-customer">
 
                 {/* Title */}
-                <motion.h2
+                {/* <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
@@ -76,7 +76,7 @@ export function Journey() {
                     className="main-txt text-center mb-16"
                 >
                     My <span className="text-blue-400">Journey</span>
-                </motion.h2>
+                </motion.h2> */}
 
                 <div className="relative">
 
@@ -88,7 +88,7 @@ export function Journey() {
                         to-transparent
                     " />
 
-                    <div className="space-y-10">
+                    <div className="space-y-4 md:space-y-8">
 
                         {journey.map((item, index) => {
 
@@ -101,7 +101,7 @@ export function Journey() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.08 }}
                                     viewport={{ once: true }}
-                                    className="relative flex items-start gap-6"
+                                    className="relative flex items-start gap-2 md:gap-6"
                                 >
 
                                     {/* timeline node */}
@@ -119,10 +119,11 @@ export function Journey() {
                                         className="
                                         group relative flex-1
                                         rounded-xl
-                                        border border-neutral-800
-                                        bg-white/2
+                                        border border-neutral-100/8
+                                        subtle-blur-card
                                         backdrop-blur
-                                        p-6
+                                        p-2
+                                        md:p-4
                                         transition-all duration-300
                                         hover:border-blue-500/60
                                         hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]
@@ -140,20 +141,20 @@ export function Journey() {
                                         <div className="relative">
 
                                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                <h3 className="sec-txt text-white font-semibold">
+                                                <h3 className="text-md md:text-xl text-white font-semibold">
                                                     {item.title}
                                                 </h3>
 
-                                                <span className="body-txt text-white/90">
+                                                <span className="text-sm md:text-base text-white/90">
                                                     {item.period}
                                                 </span>
                                             </div>
 
-                                            <p className="trd-txt text-blue-400 mb-2">
+                                            <p className="text-sm md:text-base text-blue-400 mb-2">
                                                 {item.organization}
                                             </p>
 
-                                            <p className="text-neutral-300 body-txt leading-relaxed">
+                                            <p className="text-sm md:text-base text-neutral-300 leading-relaxed">
                                                 {item.description}
                                             </p>
 
