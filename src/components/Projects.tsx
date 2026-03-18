@@ -25,8 +25,7 @@ const projects: Project[] = [
         technologies: ['C++', 'ROS2', 'CasADi', 'MATLAB', 'Foxglove'],
         intro:
             'This is an intro',
-        demo: 'https://github.com',
-        github: 'https://github.com',
+        demo: 'https://www.edag-citybot.de',
     },
     {
         title: 'Linux OS Component Testing',

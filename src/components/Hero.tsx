@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, Instagram } from 'lucide-react'
 import { ImageWithFallback } from './ui/ImageWithFallback';
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { FloatingSocials } from "./ui/FloatingSocials";
 
 function SocialLinks() {
     return (
@@ -90,61 +91,60 @@ function RotatingRoles() {
 function BriefIntro() {
     return (
         <div className='space-y-12 flex flex-col items-center mt-2'>
+            
+            {/* HELLO TEXT */}
             <motion.h1
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6 }}
                 className="hero-txt text-black text-center"
             >
-                Hello World,<br /> I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">Yifeng Shen</span>
+                Hello World,<br />
+                I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
+                    Yifeng Shen
+                </span>
             </motion.h1>
 
+            {/* ROLES */}
             <motion.div
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="mt-2"
             >
                 <RotatingRoles />
             </motion.div>
 
+            {/* PROFILE PIC (MOVED UP) */}
             <motion.div
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="flex items-center justify-center gap-8"
             >
-                <SocialLinks />
-
-                <div className="flex space-x-4">
-                    <button
-                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="px-2 sm:px-2 md:px-6 lg:px-8 xl:px-8 2xl:px-8 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
-                    >
-                    Get in Touch    
-                    </button>
-                </div>
+                <ProfilePicture />
             </motion.div>
 
-            <motion.div
+            {/* OPTIONAL: keep only CTA button */}
+            <motion.button
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
-                className="flex items-center justify-center gap-8"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md"
             >
-                 <ProfilePicture />
-            </motion.div>
+                Get in Touch
+            </motion.button>
+
         </div>
     );
 }
 
 function ProfilePicture() {
     return (
-        <div className="w-[360px] sm:w-[360px] md:w-[480px] lg:w-[36rem] rounded-2xl overflow-hidden shadow-md">
+        <div className="w-[360px] h-[360px] rounded-full overflow-hidden">
             <ImageWithFallback
                 src="resizedProfilePhoto.jpeg"
                 alt="Workspace"
-                className="object-cover"
+                className="w-full h-full object-cover object-[50%-30%] scale-220"
             />
         </div>
     );
@@ -152,12 +152,14 @@ function ProfilePicture() {
 
 export function Hero() {
     return (
-        <section id="home" className="section-customer min-h-screen items-center justify-center bgcolor-light">
+        <section id="home" className="section-customer min-h-screen items-center justify-center bgcolor-light relative">
             <div className="container-customer hero-gap">
                 <div className="justify-center">
                     <BriefIntro />
                 </div>
             </div>
+
+            <FloatingSocials />
         </section>
     );
 }
