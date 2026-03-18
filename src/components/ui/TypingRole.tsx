@@ -56,7 +56,7 @@ export function TypingRole({ onFinish }: { onFinish?: () => void }) {
     <span className="ml-1 animate-[blink_1s_infinite]">|</span>
   </span>
         {/* Typed text */}
-        <div className="absolute left-0 top-0 whitespace-nowrap overflow-hidden text-ellipsis text-black text-[clamp(1rem,2vw,1.2rem)] font-medium">
+        <div className="absolute left-0 top-0 whitespace-nowrap overflow-hidden text-ellipsis text-black text-[clamp(0.8rem,2vw,1.2rem)] font-medium">
           {displayed}
           <span className="ml-1 animate-[blink_1s_infinite]">|</span>
         </div>

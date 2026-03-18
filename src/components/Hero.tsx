@@ -116,10 +116,8 @@ export function Hero() {
                 }}
             />
             </div> */}
-            <div className="container-customer">
-                <div className="justify-center">
+            <div className="container-customer justify-center w-full">
                     <BriefIntro />
-                </div>
             </div>
 
             <FloatingSocials />
