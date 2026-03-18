@@ -29,7 +29,7 @@ function ContactCards() {
                 {/* Email */}
                 <div className="flex items-center gap-3 flex-1">
                     <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
-                        <Mail className="text-blue-600" size={20} />
+                        <Mail className="text-blue-400" size={20} />
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Email</div>
@@ -42,7 +42,7 @@ function ContactCards() {
                 {/* Phone */}
                 <div className="flex items-center gap-3 flex-1">
                     <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
-                        <Phone className="text-blue-600" size={20} />
+                        <Phone className="text-blue-400" size={20} />
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Phone</div>
@@ -55,7 +55,7 @@ function ContactCards() {
                 {/* Location */}
                 <div className="flex items-center gap-3 flex-1">
                     <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
-                        <MapPin className="text-blue-600" size={20} />
+                        <MapPin className="text-blue-400" size={20} />
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Location</div>

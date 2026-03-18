@@ -120,7 +120,7 @@ export function Projects() {
 
                             {/* Content */}
                             <div className= "flex flex-col w-full">
-                            <div className="flex flex-col max-w-[60%] md:max-w-full mx-4 md:mx-0 md:mt-4 text-left overflow-hidden">
+                            <div className="flex flex-col max-w-full mx-4 md:mx-0 md:mt-4 text-left overflow-hidden">
                                 <h3 className="text-md md:text-2xl font-bold mb-2 md:mb-6 text-black">
                                     {project.title}
                                 </h3>
@@ -168,21 +168,21 @@ export function Projects() {
             {selectedProject && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
 
-                    <div className="bg-black/90 border border-blue-400/80 rounded-2xl max-w-4xl w-full p-8 relative">
+                    <div className="bg-black/90 rounded-lg max-w-4xl w-full p-8 relative">
 
                         {/* Close */}
                         <button
                             onClick={() => setSelectedProject(null)}
-                            className="absolute right-6 top-6 text-white hover:text-black"
+                            className="absolute right-6 top-6 text-gray-400 hover:text-white"
                         >
-                            <X size={24} />
+                            <X size={20} />
                         </button>
 
                         <h3 className="sec-txt mb-4">
                             {selectedProject.title}
                         </h3>
 
-                        <p className="body-txt mb-6">
+                        <p className="text-sm md:text-base mb-6">
                             {selectedProject.about}
                         </p>
 
@@ -194,7 +194,7 @@ export function Projects() {
                         </div>
 
                         <div className="w-full rounded bg-white/8 border-white/10 backdrop-blur-lg p-2 mb-6">
-                            <p className="body-txt m-2">
+                            <p className="text-sm md:text-base m-2">
                                 {selectedProject.intro}
                             </p>
                         </div>
@@ -210,7 +210,7 @@ export function Projects() {
                             {selectedProject.technologies.map((tech, i) => (
                                 <span
                                     key={i}
-                                    className="body-txt bg-blue-400 px-3 py-1 rounded-full text-sm"
+                                    className="text-sm md:text-md border border-blue-400 px-3 py-1 rounded-full text-sm"
                                 >
                                     {tech}
                                 </span>
