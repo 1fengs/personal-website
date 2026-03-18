@@ -90,7 +90,7 @@ function RotatingRoles() {
 
 function BriefIntro() {
     return (
-        <div className='space-y-4 md:space-y-12 flex flex-col items-center mt-2'>
+        <div className='space-y-4 md:space-y-12 flex flex-col items-center'>
             
             {/* HELLO TEXT */}
             <motion.h1
@@ -153,7 +153,7 @@ function ProfilePicture() {
 export function Hero() {
     return (
         <section id="home" className="section-customer flex min-h-screen items-center justify-center bgcolor-light relative">
-            <div className="container-customer hero-gap">
+            <div className="container-customer">
                 <div className="justify-center">
                     <BriefIntro />
                 </div>

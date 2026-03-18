@@ -125,7 +125,7 @@ export function Header() {
             {/* Mobile dropdown */}
             <div
             className={`md:hidden absolute top-full left-0 w-full 
-            bg-gray-50/90 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col gap-4 
+            bg-gray-50/90 backdrop-blur-md p-6 flex flex-col gap-4 
             transition-all duration-300 ease-out z-40
             ${
                 menuOpen
