@@ -65,10 +65,10 @@ export function Header() {
     }, [activeSection]);
 
     return (
-        <header className="fixed md:top-4 lg:top-4 xl:top-4 2xl:top-4 w-full flex flex-col items-center justify-center z-50 ">
+        <header className="fixed top-0 left-0 right-0 md:top-4 lg:top-4 xl:top-4 2xl:top-4 w-full flex flex-col items-center justify-center z-50 ">
             <nav 
                 className={`relative flex items-center justify-between transition-all duration-300
-                    ${scrolled? "h-10 sm:h-10 md:h-10 lg:h-14 xl:h-14 2xl:h-14 max-w-4xl": "h-12 sm:h-12 md:h-12 lg:h-16 xl:h-16 2xl:h-16 max-w-6xl"}
+                    ${scrolled? "h-14 max-w-4xl": "h-16 max-w-6xl"}
                     w-full bg-white/40 backdrop-blur-lg md:rounded-full lg:rounded-full xl:rounded-full 2xl:rounded-full shadow-sm px-6`}
             >
                 {/* Logo, Name */}
@@ -124,8 +124,13 @@ export function Header() {
             </nav>
             {/* Mobile dropdown */}
             <div
-            className={`md:hidden mt-2 w-full max-w-5xl bg-gray-50/90 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col gap-4 transition-all duration-300 ease-out ${
-                menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"
+            className={`md:hidden absolute top-full left-0 w-full 
+            bg-gray-50/90 backdrop-blur-md rounded-2xl shadow-lg p-6 flex flex-col gap-4 
+            transition-all duration-300 ease-out z-40
+            ${
+                menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-2 pointer-events-none"
             }`}
             >
                 {sections.map((section) => (
