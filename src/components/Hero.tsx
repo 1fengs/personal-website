@@ -76,7 +76,9 @@ function BriefIntro() {
             <AvailableTag />
     </motion.div>
 
-            <button className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer">
+            <button 
+             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="will-change-transform px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer">
               Get in Touch
             </button>
           </motion.div>
