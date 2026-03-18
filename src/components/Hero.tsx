@@ -78,7 +78,7 @@ function RotatingRoles() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.4 }}
-                    className="main-txt text-black text-center"
+                    className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-black text-center"
                 >
                     {roles[index]}
                 </motion.p>
@@ -152,7 +152,7 @@ function ProfilePicture() {
 
 export function Hero() {
     return (
-        <section id="home" className="section-customer min-h-screen items-center justify-center bgcolor-light relative">
+        <section id="home" className="section-customer flex min-h-screen items-center justify-center bgcolor-light relative">
             <div className="container-customer hero-gap">
                 <div className="justify-center">
                     <BriefIntro />
