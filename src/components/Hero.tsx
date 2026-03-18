@@ -17,89 +17,75 @@ function AvailableTag() {
     )
 }
 
-// function RotatingRoles() {
-
-//     const roles = [
-//         "Robotics · Autonomous Driving",
-//         "Test Automation · Component Testing",
-//         "C/C++ · ROS2 · Python · Matlab/Simulink",
-//         "A Growth-Focused Senior Software Engineer",
-//     ];
-
-//     const [index, setIndex] = useState(0);
-//     const [locked, setLocked] = useState(false);
-
-//     useEffect(() => {
-//         if (locked) return;
-//         const interval = setInterval(() => {
-//             setIndex((prev) => {
-//                 if (prev === roles.length - 1) {
-//                     setLocked(true);
-//                     return prev; // go back to first and stop
-//                 }
-//                 return prev + 1;
-//             });
-//         }, 1500);
-//         return () => clearInterval(interval);
-//     }, [locked]);
-
-//     return (
-//         <div className="min-h-[60px] flex justify-center text-center">
-//             <AnimatePresence mode="wait">
-
-//                 <motion.p
-//                     key={index}
-//                     initial={{ y: 20, opacity: 0 }}
-//                     animate={{ y: 0, opacity: 1 }}
-//                     exit={{ y: -20, opacity: 0 }}
-//                     transition={{ duration: 0.4 }}
-//                     className="text-[clamp(1.5rem,2.5vw,2rem)] font-extrabold text-black text-center"
-//                 >
-//                     {roles[index]}
-//                 </motion.p>
-
-//             </AnimatePresence>
-//         </div>
-//     );
-// }
-
 function BriefIntro() {
-    const [showContent, setShowContent] = useState(false);
-    return (
-        <div className="hero-compact flex flex-col items-center gap-[clamp(1rem,3vw,3rem)]">
+  const [showContent, setShowContent] = useState(false);
 
-            {/* HELLO TEXT */}
-            <h1 className="text-[clamp(2.5rem,4vw,3.5rem)] leading-tight font-black text-black text-center">
-                Hello World,<br />
-                I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
-                    Yifeng Shen
-                </span>
-            </h1>
+  return (
+    <div className="hero-compact flex flex-col items-center">
 
-            {/* ROLES */}
-            <TypingRole onFinish={() => setTimeout(() => setShowContent(true), 300)} />
+      {/* TOP BLOCK (animated shift) */}
+      <motion.div
+        animate={{ y: showContent ? -20 : 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="flex flex-col items-center gap-[clamp(1rem,2vw,2rem)]"
+      >
+        {/* HELLO TEXT */}
+        <h1 className="text-[clamp(2.5rem,4vw,3.5rem)] leading-tight font-black text-black text-center">
+          Hello World,<br />
+          I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
+            Yifeng Shen
+          </span>
+        </h1>
 
-            <AnimatePresence>
-            {showContent && (
-                <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.6 }}
-                className="flex flex-col items-center gap-4"
-                >
-            <ProfilePicture />
+        {/* Typing */}
+        <TypingRole
+          onFinish={() => setTimeout(() => setShowContent(true), 300)}
+        />
+      </motion.div>
+
+        <div className="relative">
+      <span className="invisible left-0 top-0 flex flex-col items-center gap-4">
+                    <ProfilePicture />
             <AvailableTag />
-            <button className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
-            >
-                Get in Touch
-            </button>
 
-                        </motion.div>
-                        )}
-            </AnimatePresence>
-        </div>
-    );
+            <button className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer">
+              Get in Touch
+            </button>
+      </span>
+
+      {/* BOTTOM CONTENT */}
+      <AnimatePresence>
+        {showContent && (
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute left-0 top-0 flex flex-col items-center gap-4"
+          >
+            <ProfilePicture />
+                <motion.div
+      animate={{ y: [0, -4, 0] }}
+      transition={{
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="will-change-transform overflow-hidden mt-2"
+    >
+            <AvailableTag />
+    </motion.div>
+
+            <button className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer">
+              Get in Touch
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      </div>
+
+    </div>
+  );
 }
 
 function ProfilePicture() {
