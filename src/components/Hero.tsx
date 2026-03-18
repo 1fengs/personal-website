@@ -90,7 +90,7 @@ function RotatingRoles() {
 
 function BriefIntro() {
     return (
-        <div className='space-y-12 flex flex-col items-center mt-2'>
+        <div className='space-y-4 md:space-y-12 flex flex-col items-center mt-2'>
             
             {/* HELLO TEXT */}
             <motion.h1

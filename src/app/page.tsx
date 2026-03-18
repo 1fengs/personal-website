@@ -6,6 +6,7 @@ import {Projects} from '../components/Projects';
 import {Contact} from '../components/Contact';
 import {Footer} from '../components/Footer';
 import {Journey} from '../components/Journey';
+import {BackToTop} from '../components/ui/BackToTop';
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
         <Journey />
         <Contact />
         <Footer />
+
+        <BackToTop />
       </main>
     </div>
   );
