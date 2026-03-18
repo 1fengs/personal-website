@@ -9,10 +9,10 @@ export function FloatingSocials() {
     const [isHeroVisible, setIsHeroVisible] = useState(true);
 
     const links = [
-        { icon: <Github size={20} />, href: "https://github.com/1fengs" },
-        { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/yifeng-shen95/" },
-        { icon: <Instagram size={20} />, href: "https://www.instagram.com/esyf/" },
-        { icon: <Mail size={20} />, href: "mailto:evanshen95@gmail.com" },
+        { icon: <Github size={25} />, href: "https://github.com/1fengs" },
+        { icon: <Linkedin size={25} />, href: "https://www.linkedin.com/in/yifeng-shen95/" },
+        { icon: <Instagram size={25} />, href: "https://www.instagram.com/esyf/" },
+        { icon: <Mail size={25} />, href: "mailto:evanshen95@gmail.com" },
     ];
 
     // 👇 Detect if hero is visible
@@ -97,7 +97,7 @@ export function FloatingSocials() {
                                             animate={{ opacity: 1, x: 0 }}
                                             exit={{ opacity: 0, x: 20 }}
                                             transition={{ delay: i * 0.05 }}
-                                            className="w-11 h-11 flex items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-100"
+                                            className="w-11 h-11 flex text-black items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-100"
                                         >
                                             {link.icon}
                                         </motion.a>
