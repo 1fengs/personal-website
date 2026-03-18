@@ -17,7 +17,7 @@ type Project = {
 
 const projects: Project[] = [
     {
-        title: 'Autonomous Driving with ROS2',
+        title: 'Autonomous Driving',
         description: 'MPC-based trajectory planning using ROS2 and CasADi.',
         image: 'CityBot-alt.png',
         about:
@@ -29,7 +29,7 @@ const projects: Project[] = [
         github: 'https://github.com',
     },
     {
-        title: 'Linux-based OS Test Automation',
+        title: 'Linux OS Component Testing',
         description: 'Automated system validation for Volkswagen Linux platform.',
         image: 'VWOS-alt.png',
         about:
@@ -39,7 +39,7 @@ const projects: Project[] = [
             'This is an intro',
     },
     {
-        title: 'Elevator HiL Component Testing',
+        title: 'Elevator HiL Test Automation',
         description: 'Python-based automation framework for hardware-in-the-loop testing.',
         image: 'OTIS-alt.png',
         about:
