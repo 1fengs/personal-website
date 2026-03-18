@@ -118,7 +118,7 @@ export function Journey() {
                                     <div
                                         className="
                                         group relative flex-1
-                                        rounded-xl
+                                        rounded-lg
                                         border border-neutral-100/8
                                         subtle-blur-card
                                         backdrop-blur

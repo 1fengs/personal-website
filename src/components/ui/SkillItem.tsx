@@ -19,14 +19,14 @@ export default function SkillItem({ skill }: any) {
         group
         p-2
         md:p-4
-        rounded-2xl
-        bg-white
+        rounded-lg
+        bgcolor-light
         border border-gray-200
         backdrop-blur-md
         transition-all
-        hover:bg-gray-50
-        hover:border-gray-300
-        hover:shadow-lg
+        duration-50
+        hover:border-blue-500/60
+        hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]
       "
     >
       <div className="flex flex-col items-center justify-center gap-1 md:gap-3 text-center">

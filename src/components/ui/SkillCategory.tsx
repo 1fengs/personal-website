@@ -15,10 +15,8 @@ export default function SkillCategory({ category }: any) {
       className="
         p-2
         md:p-4
-        rounded-2xl
-        bgcolor-light
-        border border-white/10
-        backdrop-blur-md
+        rounded-lg
+        subtle-blur-card
       "
     >
       {/* Header */}
@@ -28,7 +26,7 @@ export default function SkillCategory({ category }: any) {
           <CategoryIcon className="w-5 h-5 text-white/60" />
         )}
         {/* <div className="w-1 h-6 bg-blue-400 rounded"></div> */}
-        <h3 className="tex-sm md:text-lg font-bold text-black">
+        <h3 className="ml-2 tex-sm md:text-lg font-bold">
           {category.title}
         </h3>
       </div>
@@ -39,7 +37,8 @@ export default function SkillCategory({ category }: any) {
           grid
           grid-cols-[repeat(auto-fill,minmax(100px,1fr))]
           md:grid-cols-6
-          gap-4
+          gap-2
+            md:gap-4
         "
       >
         {category.skills.map((skill: any, i: number) => (
