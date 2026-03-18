@@ -4,13 +4,13 @@ import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 export function Footer() {
     return (
         <footer className="section-customer pb-2">
-            <div className="container-customer border-t border-gray-700 pt-10 pb-2">
+            <div className="container-customer border-t border-gray-700 pt-4 md:pt-10 pb-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center md:text-left">
 
                     {/* About */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-4">Yifeng Shen</h3>
-                        <p className="text-gray-400 text-sm leading-relaxed">
+                        <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Yifeng Shen</h3>
+                        <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
                             Senior Software Engineer specializing in C++ and Python.
                             Passionate about building scalable software solutions and
                             exploring new technologies.
@@ -19,32 +19,32 @@ export function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Quick Links</h3>
                         <div className="space-y-2">
                             <button
                                 onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="block w-full md:w-auto text-gray-400 hover:text-white transition-colors"
+                                className="block w-full md:w-auto text-xs md:text-sm text-gray-400 hover:text-white transition-colors"
                             >
                                 Home
                             </button>
 
                             <button
                                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="block w-full md:w-auto text-gray-400 hover:text-white transition-colors"
+                                className="block w-full md:w-auto text-xs md:text-sm text-gray-400 hover:text-white transition-colors"
                             >
                                 About
                             </button>
 
                             <button
                                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="block w-full md:w-auto text-gray-400 hover:text-white transition-colors"
+                                className="block w-full md:w-auto text-xs md:text-sm text-gray-400 hover:text-white transition-colors"
                             >
                                 Projects
                             </button>
 
                             <button
                                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                                className="block w-full md:w-auto text-gray-400 hover:text-white transition-colors"
+                                className="block w-full md:w-auto text-xs md:text-sm text-gray-400 hover:text-white transition-colors"
                             >
                                 Contact
                             </button>
@@ -53,7 +53,7 @@ export function Footer() {
 
                     {/* Social */}
                     <div>
-                        <h3 className="text-xl font-semibold mb-4">Connect</h3>
+                        <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-4">Connect</h3>
 
                         <div className="flex justify-center md:justify-start space-x-4">
                             <a
@@ -94,7 +94,7 @@ export function Footer() {
 
                 </div>
 
-                <div className="mt-10 pt-6 text-center text-gray-400 text-sm">
+                <div className="mt-5 md:mt-10 pt-6 text-center text-gray-400 text-xs">
                     <p>© {new Date().getFullYear()} Yifeng Shen. All rights reserved.</p>
                 </div>
             </div>

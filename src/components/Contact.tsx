@@ -3,46 +3,69 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 
+function AvailableTag() {
+  return (
+    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
+                    text-white text-sm font-medium
+                    bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 
+                    bg-[length:200%_200%] animate-gradient">
+      
+      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+      Available for Work
+    </div>
+  );
+}
+
 function ContactCards() {
     return (
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="flex justify-center mx-auto mb-6 px-4">
+            <div className="
+                subtle-blur-card 
+                p-4 md:p-6 
+                flex flex-col gap-4 w-[80%]
+                md:flex-row md:items-center md:gap-8
+            ">
 
-            <div className="p-6 bg-white/2 border border-blue-400/5 rounded-xl shadow-sm border flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Mail className="text-blue-600" size={22} />
-                </div>
-                <div>
-                    <div className="font-semibold">Email</div>
-                    <div className="text-sm">
-                        evanshen95@gmail.com
+                {/* Email */}
+                <div className="flex items-center gap-3 flex-1">
+                    <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
+                        <Mail className="text-blue-400" size={20} />
+                    </div>
+                    <div>
+                        <div className="body-txt font-semibold">Email</div>
+                        <div className="body-txt break-all">
+                            evanshen95@gmail.com
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="p-6 bg-white/2 border border-blue-400/5 rounded-xl shadow-sm border flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <Phone className="text-blue-600" size={22} />
-                </div>
-                <div>
-                    <div className="font-semibold">Phone</div>
-                    <div className="text-sm">
-                        +49 (0)152 25220284
+                {/* Phone */}
+                <div className="flex items-center gap-3 flex-1">
+                    <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
+                        <Phone className="text-blue-400" size={20} />
+                    </div>
+                    <div>
+                        <div className="body-txt font-semibold">Phone</div>
+                        <div className="body-txt text-sm">
+                            +49 (0)152 25220284
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="p-6 bg-white/2 border border-blue-400/5 rounded-xl shadow-sm border flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <MapPin className="text-blue-600" size={22} />
-                </div>
-                <div>
-                    <div className="font-semibold">Location</div>
-                    <div className="text-sm">
-                        Berlin, Germany
+                {/* Location */}
+                <div className="flex items-center gap-3 flex-1">
+                    <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
+                        <MapPin className="text-blue-400" size={20} />
+                    </div>
+                    <div>
+                        <div className="body-txt font-semibold">Location</div>
+                        <div className="body-txt text-sm">
+                            Berlin, Germany
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     );
 }
@@ -92,20 +115,23 @@ export function Contact() {
             <div className="container-customer">
 
                 <div className="text-center mb-12">
-                    <h2 className="text-6xl font-bold mb-4">
+                    <h2 className="main-txt mb-4">
                         Get <span className="text-blue-400">In Touch</span>
                     </h2>
 
-                    <p className="text-lg max-w-2xl mx-auto">
+                    <p className="body-txt text-gray-400">
                         If you have any questions, want to collaborate,
                         or just want to say hi, feel free to reach out.
-                        I'm always open to new opportunities.
                     </p>
+                </div>
+
+                <div className="flex items-center justify-center mb-6">
+                    <AvailableTag />
                 </div>
 
                 <ContactCards />
 
-                <div className="bg-white/2 border border-blue-400/5 rounded-xl shadow-sm p-8">
+                <div className="mx-auto subtle-blur-card p-8 md:max-w-[78%]">
 
                     <form
                         onSubmit={handleSubmit}
@@ -113,7 +139,7 @@ export function Contact() {
                     >
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Name
                             </label>
 
@@ -129,7 +155,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Email
                             </label>
 
@@ -145,7 +171,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="block text-lg font-semibold mb-2">
+                            <label className="body-txt block font-semibold mb-2">
                                 Message
                             </label>
 
@@ -171,7 +197,7 @@ export function Contact() {
 
                         <button
                             type="submit"
-                            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
+                            className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
                         >
                             Send Message
                         </button>

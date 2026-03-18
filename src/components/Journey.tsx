@@ -17,7 +17,7 @@ const journey: JourneyItem[] = [
         organization: "East China University of Science and Technology",
         period: "2014 – 2018 · Shanghai",
         description:
-            "Specialized in Measurement & Control Technology. Awarded the National Scholarship (Top 0.2% in China).",
+            "Graduated with a GPA of 3.75/4.0 and received the National Scholarship (top 0.2%) for top academic performance",
         icon: GraduationCap
     },
     // {
@@ -33,7 +33,7 @@ const journey: JourneyItem[] = [
         organization: "RWTH Aachen University",
         period: "2018 – 2022 · Aachen",
         description:
-            "Focused on Information Technology and Computer Engineering with emphasis on embedded systems and software development.",
+            "Graduated with GPA 1.8/1.0, with coursework focused on robotics, optimization, control systems, and embedded systems",
         icon: GraduationCap
     },
     // {
@@ -57,26 +57,26 @@ const journey: JourneyItem[] = [
         organization: "EDAG Engineering Group",
         period: "Mar 2022 – Feb 2026 · Berlin",
         description:
-            "Developed ROS2 trajectory planning nodes, automated HiL testing systems, and Linux-based automotive test frameworks.",
+            "Developed ROS2 trajectory planning nodes, automated HiL testing systems, and Linux-based operating system testing.",
         icon: Briefcase
     }
 ];
 
 export function Journey() {
     return (
-        <section className="relative section-customer">
+        <section className="section-customer relative p-2">
             <div className="container-customer">
 
                 {/* Title */}
-                <motion.h2
+                {/* <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
-                    className="text-6xl font-bold text-white text-center mb-16"
+                    className="main-txt text-center mb-16"
                 >
                     My <span className="text-blue-400">Journey</span>
-                </motion.h2>
+                </motion.h2> */}
 
                 <div className="relative">
 
@@ -88,7 +88,7 @@ export function Journey() {
                         to-transparent
                     " />
 
-                    <div className="space-y-10">
+                    <div className="space-y-4 md:space-y-8">
 
                         {journey.map((item, index) => {
 
@@ -101,7 +101,7 @@ export function Journey() {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.08 }}
                                     viewport={{ once: true }}
-                                    className="relative flex items-start gap-6"
+                                    className="relative flex items-start gap-2 md:gap-6"
                                 >
 
                                     {/* timeline node */}
@@ -118,11 +118,12 @@ export function Journey() {
                                     <div
                                         className="
                                         group relative flex-1
-                                        rounded-xl
-                                        border border-neutral-800
-                                        bg-white/2
+                                        rounded-lg
+                                        border border-neutral-100/8
+                                        subtle-blur-card
                                         backdrop-blur
-                                        p-6
+                                        p-2
+                                        md:p-4
                                         transition-all duration-300
                                         hover:border-blue-500/60
                                         hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]
@@ -140,20 +141,20 @@ export function Journey() {
                                         <div className="relative">
 
                                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                                                <h3 className="text-3xl text-white font-semibold">
+                                                <h3 className="text-md md:text-xl text-white font-semibold">
                                                     {item.title}
                                                 </h3>
 
-                                                <span className="text-lg text-white/90">
+                                                <span className="text-sm md:text-base text-white/90">
                                                     {item.period}
                                                 </span>
                                             </div>
 
-                                            <p className="text-blue-400 font-semibold text-2xl mb-2">
+                                            <p className="text-sm md:text-base text-blue-400 mb-2">
                                                 {item.organization}
                                             </p>
 
-                                            <p className="text-neutral-300 text-lg leading-relaxed">
+                                            <p className="text-sm md:text-base text-neutral-300 leading-relaxed">
                                                 {item.description}
                                             </p>
 
