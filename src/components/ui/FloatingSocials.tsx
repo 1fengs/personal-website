@@ -97,7 +97,11 @@ export function FloatingSocials() {
                                             animate={{ opacity: 1, x: 0 }}
                                             exit={{ opacity: 0, x: 20 }}
                                             transition={{ delay: i * 0.05 }}
-                                            className="w-11 h-11 flex text-black items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-100"
+                                            className="w-11 h-11 flex text-black items-center justify-center rounded-full
+        bg-white/40 backdrop-blur-lg
+        shadow-lg
+        transition-all duration-300
+        hover:scale-110 hover:bg-white/60"
                                         >
                                             {link.icon}
                                         </motion.a>
@@ -109,7 +113,7 @@ export function FloatingSocials() {
                         {/* MAIN BUTTON */}
                         <button
                             onClick={() => setOpen(!open)}
-                            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-xl"
+                            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-xl hover:scale-110 transition-all duration-300"
                         >
                             {open ? <X size={20} /> : <MoreHorizontal size={20} />}
                         </button>
