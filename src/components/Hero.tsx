@@ -1,146 +1,110 @@
 "use client";
-import { Github, Linkedin, Mail, Instagram } from 'lucide-react'
 import { ImageWithFallback } from './ui/ImageWithFallback';
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FloatingSocials } from "./ui/FloatingSocials";
+import { TypingRole } from "./ui/TypingRole"
 
-function SocialLinks() {
-    return (
-        <div className="flex space-x-4">
-            <a
-                href="https://github.com/1fengs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sociallink-button"
-            >
-                <Github size={24} className="text-gray-700" />
-            </a>
-            <a
-                href="https://www.linkedin.com/in/yifeng-shen95/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sociallink-button"
-            >
-                <Linkedin size={24} className="text-gray-700" />
-            </a>
-            <a
-                href="https://www.instagram.com/esyf/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sociallink-button"
-            >
-                <Instagram size={24} className="text-gray-700" />
-            </a>
-            <a
-                href="mailto:evanshen95@gmail.com"
-                className="sociallink-button"
-            >
-                <Mail size={24} className="text-gray-700" />
-            </a>
+function AvailableTag() {
+    return(
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
+                text-white text-sm font-medium
+                bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500
+                bg-[length:200%_200%] animate-gradient">
+        <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+        Available for Work
         </div>
-    );
+    )
 }
 
-function RotatingRoles() {
+// function RotatingRoles() {
 
-    const roles = [
-        "Robotics · Autonomous Driving",
-        "Test Automation · Component Testing",
-        "C/C++ · ROS2 · Python · Matlab/Simulink",
-        "A Growth-Focused Senior Software Engineer",
-    ];
+//     const roles = [
+//         "Robotics · Autonomous Driving",
+//         "Test Automation · Component Testing",
+//         "C/C++ · ROS2 · Python · Matlab/Simulink",
+//         "A Growth-Focused Senior Software Engineer",
+//     ];
 
-    const [index, setIndex] = useState(0);
-    const [locked, setLocked] = useState(false);
+//     const [index, setIndex] = useState(0);
+//     const [locked, setLocked] = useState(false);
 
-    useEffect(() => {
-        if (locked) return;
-        const interval = setInterval(() => {
-            setIndex((prev) => {
-                if (prev === roles.length - 1) {
-                    setLocked(true);
-                    return prev; // go back to first and stop
-                }
-                return prev + 1;
-            });
-        }, 1500);
-        return () => clearInterval(interval);
-    }, [locked]);
+//     useEffect(() => {
+//         if (locked) return;
+//         const interval = setInterval(() => {
+//             setIndex((prev) => {
+//                 if (prev === roles.length - 1) {
+//                     setLocked(true);
+//                     return prev; // go back to first and stop
+//                 }
+//                 return prev + 1;
+//             });
+//         }, 1500);
+//         return () => clearInterval(interval);
+//     }, [locked]);
 
-    return (
-        <div className="min-h-[60px] flex justify-center text-center">
-            <AnimatePresence mode="wait">
+//     return (
+//         <div className="min-h-[60px] flex justify-center text-center">
+//             <AnimatePresence mode="wait">
 
-                <motion.p
-                    key={index}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -20, opacity: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-black text-center"
-                >
-                    {roles[index]}
-                </motion.p>
+//                 <motion.p
+//                     key={index}
+//                     initial={{ y: 20, opacity: 0 }}
+//                     animate={{ y: 0, opacity: 1 }}
+//                     exit={{ y: -20, opacity: 0 }}
+//                     transition={{ duration: 0.4 }}
+//                     className="text-[clamp(1.5rem,2.5vw,2rem)] font-extrabold text-black text-center"
+//                 >
+//                     {roles[index]}
+//                 </motion.p>
 
-            </AnimatePresence>
-        </div>
-    );
-}
+//             </AnimatePresence>
+//         </div>
+//     );
+// }
 
 function BriefIntro() {
+    const [showContent, setShowContent] = useState(false);
     return (
-        <div className='space-y-4 md:space-y-12 flex flex-col items-center'>
-            
+        <div className="hero-compact flex flex-col items-center gap-[clamp(1rem,3vw,3rem)]">
+
             {/* HELLO TEXT */}
-            <motion.h1
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-                className="hero-txt text-black text-center"
-            >
+            <h1 className="text-[clamp(2.5rem,4vw,3.5rem)] leading-tight font-black text-black text-center">
                 Hello World,<br />
                 I'm <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
                     Yifeng Shen
                 </span>
-            </motion.h1>
+            </h1>
 
             {/* ROLES */}
-            <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-            >
-                <RotatingRoles />
-            </motion.div>
+            <TypingRole onFinish={() => setTimeout(() => setShowContent(true), 300)} />
 
-            {/* PROFILE PIC (MOVED UP) */}
-            <motion.div
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-            >
-                <ProfilePicture />
-            </motion.div>
-
-            {/* OPTIONAL: keep only CTA button */}
-            <motion.button
-                initial={{ y: 80, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md"
+            <AnimatePresence>
+            {showContent && (
+                <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col items-center gap-4"
+                >
+            <ProfilePicture />
+            <AvailableTag />
+            <button className="px-6 py-3 body-txt bg-blue-600 font-semibold text-white rounded-full hover:bg-blue-700 transition-colors shadow-md cursor-pointer"
             >
                 Get in Touch
-            </motion.button>
+            </button>
 
+                        </motion.div>
+                        )}
+            </AnimatePresence>
         </div>
     );
 }
 
 function ProfilePicture() {
     return (
-        <div className="w-[240px] h-[240px] md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden">
+        <div className="will-change-transform w-[clamp(180px,20vw,420px)] h-[clamp(180px,20vw,420px)] shadow-2xl rounded-full overflow-hidden">
             <ImageWithFallback
                 src="resizedProfilePhoto.jpeg"
                 alt="Workspace"
@@ -153,6 +117,19 @@ function ProfilePicture() {
 export function Hero() {
     return (
         <section id="home" className="section-customer flex min-h-screen items-center justify-center bgcolor-light relative">
+
+            {/* <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
+            <div
+                className="w-full h-full"
+                style={{
+                backgroundImage: `
+                    linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px)
+                `,
+                backgroundSize: "40px 40px",
+                }}
+            />
+            </div> */}
             <div className="container-customer">
                 <div className="justify-center">
                     <BriefIntro />
