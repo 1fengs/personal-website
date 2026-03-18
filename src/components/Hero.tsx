@@ -140,7 +140,7 @@ function BriefIntro() {
 
 function ProfilePicture() {
     return (
-        <div className="w-[360px] h-[360px] rounded-full overflow-hidden">
+        <div className="w-[240px] h-[240px] md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full overflow-hidden">
             <ImageWithFallback
                 src="resizedProfilePhoto.jpeg"
                 alt="Workspace"
