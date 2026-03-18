@@ -97,3 +97,13 @@ body {
         @apply bg-neutral-100/8 shadow-lg backdrop-blur-lg p-8 rounded-xl;
     }
 }
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  animation: gradientMove 4s ease infinite;
+}

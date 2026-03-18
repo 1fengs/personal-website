@@ -39,7 +39,7 @@ function AboutHeader() {
 function ExperienceCards() {
 	return (
 		<div className="items-center justify-center flex mx-auto">
-            <div className="subtle-blur-card grid grid-cols-3 gap-10 lg:gap-20 p-8">
+            <div className="subtle-blur-card grid grid-cols-3 gap-10 lg:gap-20 p-4 md:p-8">
 
 
                 <div className="text-left">
