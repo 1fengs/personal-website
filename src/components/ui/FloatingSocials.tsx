@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Github, Linkedin, Mail, Instagram, MoreHorizontal, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Github, Linkedin, Mail, Instagram, MoreHorizontal, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export function FloatingSocials() {
     const [open, setOpen] = useState(false);
     const [isHeroVisible, setIsHeroVisible] = useState(true);
 
     const links = [
-        { icon: <Github size={25} />, href: "https://github.com/1fengs" },
-        { icon: <Linkedin size={25} />, href: "https://www.linkedin.com/in/yifeng-shen95/" },
-        { icon: <Instagram size={25} />, href: "https://www.instagram.com/esyf/" },
-        { icon: <Mail size={25} />, href: "mailto:evanshen95@gmail.com" },
+        { icon: <Github size={25} />, href: 'https://github.com/1fengs' },
+        { icon: <Linkedin size={25} />, href: 'https://www.linkedin.com/in/yifeng-shen95/' },
+        { icon: <Instagram size={25} />, href: 'https://www.instagram.com/esyf/' },
+        { icon: <Mail size={25} />, href: 'mailto:evanshen95@gmail.com' },
     ];
 
     // 👇 Detect if hero is visible
@@ -32,9 +32,9 @@ export function FloatingSocials() {
             lastScrollY = currentScrollY;
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (

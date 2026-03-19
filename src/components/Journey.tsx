@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { motion } from 'framer-motion';
 import { GraduationCap, Briefcase, Trophy, FlaskConical } from 'lucide-react';
@@ -13,12 +13,12 @@ type JourneyItem = {
 
 const journey: JourneyItem[] = [
     {
-        title: "Bachelor of Engineering – Automation",
-        organization: "East China University of Science and Technology",
-        period: "2014 – 2018 · Shanghai",
+        title: 'Bachelor of Engineering – Automation',
+        organization: 'East China University of Science and Technology',
+        period: '2014 – 2018 · Shanghai',
         description:
-            "Graduated with a GPA of 3.75/4.0 and received the National Scholarship (top 0.2%) for top academic performance",
-        icon: GraduationCap
+            'Graduated with a GPA of 3.75/4.0 and received the National Scholarship (top 0.2%) for top academic performance',
+        icon: GraduationCap,
     },
     // {
     //     title: "NXP Cup Intelligent Car Race",
@@ -29,12 +29,12 @@ const journey: JourneyItem[] = [
     //     icon: Trophy
     // },
     {
-        title: "Master of Science – Electrical Engineering",
-        organization: "RWTH Aachen University",
-        period: "2018 – 2022 · Aachen",
+        title: 'Master of Science – Electrical Engineering',
+        organization: 'RWTH Aachen University',
+        period: '2018 – 2022 · Aachen',
         description:
-            "Graduated with GPA 1.8/1.0, with coursework focused on robotics, optimization, control systems, and embedded systems",
-        icon: GraduationCap
+            'Graduated with GPA 1.8/1.0, with coursework focused on robotics, optimization, control systems, and embedded systems',
+        icon: GraduationCap,
     },
     // {
     //     title: "Master Thesis",
@@ -45,28 +45,27 @@ const journey: JourneyItem[] = [
     //     icon: FlaskConical
     // },
     {
-        title: "Software Engineering Intern",
-        organization: "Continental AG",
-        period: "Apr 2021 – Sep 2021 · Hamburg",
+        title: 'Software Engineering Intern',
+        organization: 'Continental AG',
+        period: 'Apr 2021 – Sep 2021 · Hamburg',
         description:
-            "Designed a software prototype in Figma for an RFID connector product and supported machine-learning data labeling.",
-        icon: Briefcase
+            'Designed a software prototype in Figma for an RFID connector product and supported machine-learning data labeling.',
+        icon: Briefcase,
     },
     {
-        title: "Software Engineer",
-        organization: "EDAG Engineering Group",
-        period: "Mar 2022 – Feb 2026 · Berlin",
+        title: 'Software Engineer',
+        organization: 'EDAG Engineering Group',
+        period: 'Mar 2022 – Feb 2026 · Berlin',
         description:
-            "Developed ROS2 trajectory planning nodes, automated HiL testing systems, and Linux-based operating system testing.",
-        icon: Briefcase
-    }
+            'Developed ROS2 trajectory planning nodes, automated HiL testing systems, and Linux-based operating system testing.',
+        icon: Briefcase,
+    },
 ];
 
 export function Journey() {
     return (
         <section className="section-customer relative p-2">
             <div className="container-customer">
-
                 {/* Title */}
                 {/* <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -79,19 +78,18 @@ export function Journey() {
                 </motion.h2> */}
 
                 <div className="relative">
-
                     {/* timeline line */}
-                    <div className="absolute left-4 top-0 h-full w-px
+                    <div
+                        className="absolute left-4 top-0 h-full w-px
                         bg-gradient-to-b
                         from-blue-500/70
                         via-blue-400/40
                         to-transparent
-                    " />
+                    "
+                    />
 
                     <div className="space-y-4 md:space-y-8">
-
                         {journey.map((item, index) => {
-
                             const Icon = item.icon;
 
                             return (
@@ -103,15 +101,16 @@ export function Journey() {
                                     viewport={{ once: true }}
                                     className="relative flex items-start gap-2 md:gap-6"
                                 >
-
                                     {/* timeline node */}
-                                    <div className="relative z-10 flex items-center justify-center
+                                    <div
+                                        className="relative z-10 flex items-center justify-center
                                         w-9 h-9 rounded-full
                                         bg-neutral-900
                                         border border-neutral-700
                                         shadow-md shadow-blue-500/10
-                                    ">
-                                        <Icon size={16} className="text-blue-400"/>
+                                    "
+                                    >
+                                        <Icon size={16} className="text-blue-400" />
                                     </div>
 
                                     {/* card */}
@@ -129,17 +128,17 @@ export function Journey() {
                                         hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]
                                         "
                                     >
-
                                         {/* glow effect */}
-                                        <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition
+                                        <div
+                                            className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition
                                             bg-gradient-to-r
                                             from-blue-500/10
                                             via-transparent
                                             to-blue-500/10
-                                        "/>
+                                        "
+                                        />
 
                                         <div className="relative">
-
                                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
                                                 <h3 className="text-md md:text-xl text-white font-semibold">
                                                     {item.title}
@@ -157,19 +156,13 @@ export function Journey() {
                                             <p className="text-sm md:text-base text-neutral-300 leading-relaxed">
                                                 {item.description}
                                             </p>
-
                                         </div>
-
                                     </div>
-
                                 </motion.div>
                             );
                         })}
-
                     </div>
-
                 </div>
-
             </div>
         </section>
     );
