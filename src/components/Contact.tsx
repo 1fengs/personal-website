@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
+import { track } from '@vercel/analytics';
 
 function AvailableTag() {
     return (
@@ -170,6 +171,9 @@ export function Contact() {
                         <button
                             type="submit"
                             className="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition shadow-sm"
+                            onClick={() => {
+                                track('Send Message Click', { method: 'email' });
+                            }}
                         >
                             Send Message
                         </button>

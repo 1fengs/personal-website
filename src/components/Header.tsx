@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { track } from '@vercel/analytics';
 
 export function Header() {
     const [activeSection, setActiveSection] = useState('home');
@@ -145,6 +146,9 @@ export function Header() {
                     href="CV.pdf"
                     download
                     className="bg-blue-600 text-white px-4 py-2 rounded-full text-center"
+                    onClick={() => {
+                        track('CV Downloaded');
+                    }}
                 >
                     Download CV
                 </a>

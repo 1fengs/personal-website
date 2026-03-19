@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ExternalLink, Github, X } from 'lucide-react';
 import { ImageWithFallback } from './ui/ImageWithFallback';
+import { track } from '@vercel/analytics';
 
 type Project = {
     title: string;
@@ -297,6 +298,11 @@ export function Projects() {
                                     href={selectedProject.github}
                                     target="_blank"
                                     className="flex items-center gap-2 hover:text-blue-400"
+                                    onClick={() => {
+                                        track('Github from project Clicked', {
+                                            project: selectedProject.title,
+                                        });
+                                    }}
                                 >
                                     <Github size={18} />
                                     Code
@@ -308,6 +314,11 @@ export function Projects() {
                                     href={selectedProject.demo}
                                     target="_blank"
                                     className="flex items-center gap-2 hover:text-blue-400"
+                                    onClick={() => {
+                                        track('External Link from project Click', {
+                                            project: selectedProject.title,
+                                        });
+                                    }}
                                 >
                                     <ExternalLink size={18} />
                                     Visit
