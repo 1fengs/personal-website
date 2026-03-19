@@ -22,7 +22,7 @@ const projects: Project[] = [
         image: 'CityBot-alt.png',
         about:
             'Developed ROS2 nodes in C++ for MPC-based trajectory planning. Created mock map data and visualized results using MATLAB. Tested and calibrated an autonomous tractor using Foxglove for real-time visualization.',
-        technologies: ['C++', 'ROS2', 'CasADi', 'MATLAB', 'Foxglove'],
+        technologies: ['C++', 'ROS2', 'MATLAB/Simulink', 'MPC', 'CasADi', 'Trajectory Planning', 'Foxglove', 'Autosar', 'Git', 'BitBucket'],
         intro:
             'This is an intro',
         demo: 'https://www.edag-citybot.de',
@@ -33,9 +33,10 @@ const projects: Project[] = [
         image: 'VWOS-alt.png',
         about:
             'Designed test cases based on system requirements using CodeBeamer and automated testing with Robot Framework on Ubuntu. Documented results, reported defects, and maintained automated tests within an agile Scrum team.',
-        technologies: ['Robot Framework', 'Ubuntu', 'CodeBeamer', 'Python'],
+        technologies: ['Robot Framework', 'Ubuntu', 'CI/CD', 'CodeBeamer', 'Agile', 'Scrum', 'JIRA', 'Confluence', 'Component Testing', 'Git', 'BitBucket'],
         intro:
             'This is an intro',
+        demo: 'https://cariad.technology/de/en/news/stories/vw-os-software-platform-explained.html'
     },
     {
         title: 'Elevator HiL Test Automation',
@@ -43,7 +44,7 @@ const projects: Project[] = [
         image: 'OTIS-alt.png',
         about:
             'Developed a Python Tkinter application to parse serial data and interact with CANoe via pywin32. Implemented a Python-MATLAB-CANoe interface over TCP/IP and automated Simulink test model generation from Excel.',
-        technologies: ['Python', 'Tkinter', 'MATLAB', 'CANoe', 'Simulink'],
+        technologies: ['Python', 'MATLAB/Simulink', 'CAPL', 'pywin32', 'CANoe', 'CAN', 'TCP/IP', 'HiL', 'Serial Reading', 'Multithreading', 'Git', 'BitBucket'],
         intro:
             'This is an intro',
     },
@@ -53,7 +54,7 @@ const projects: Project[] = [
         image: 'Continental-alt.png',
         about:
             'Designed and prototyped a software application using Figma for an RFID-based connector product. Contributed to data labeling for a machine learning project related to golf training.',
-        technologies: ['Figma', 'UX Design', 'Machine Learning'],
+        technologies: ['Figma', 'UX Design', 'Proof of Concept'],
         intro:
             'This is an intro',
     },
@@ -63,10 +64,10 @@ const projects: Project[] = [
         image: 'Master-alt.png',
         about:
             'Analyzed the mapping of IEC 61850 ASCI models and services into XMPP. Extended the open-source C library libiec61850 and implemented XMPP services to enable communication between systems.',
-        technologies: ['C', 'IEC 61850', 'XMPP', 'Networking'],
-        github: 'https://github.com',
+        technologies: ['C', 'IEC 61850', 'XMPP', 'Smart Grid', 'Open-source', 'Git', 'GitLab'],
         intro:
             'This is an intro',
+        demo: 'https://www.fein-aachen.org/projects/villas-node/'
     },
     {
         title: 'Intelligent Car Race',
@@ -77,6 +78,7 @@ const projects: Project[] = [
         technologies: ['Embedded C', 'ARM Cortex-M4', 'Image Processing'],
         intro:
             'This is an intro',
+        demo: 'https://aiotcloud.nxp.com.cn/smartcar-vision?lan=en'
     },
 ];
 
