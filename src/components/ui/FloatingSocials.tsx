@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { Github, Linkedin, Mail, Instagram, MoreHorizontal, X } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { Github, Linkedin, Mail, Instagram, MoreHorizontal, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export function FloatingSocials() {
     const [open, setOpen] = useState(false);
     const [isHeroVisible, setIsHeroVisible] = useState(true);
 
     const links = [
-        { icon: <Github size={25} />, href: "https://github.com/1fengs" },
-        { icon: <Linkedin size={25} />, href: "https://www.linkedin.com/in/yifeng-shen95/" },
-        { icon: <Instagram size={25} />, href: "https://www.instagram.com/esyf/" },
-        { icon: <Mail size={25} />, href: "mailto:evanshen95@gmail.com" },
+        { icon: <Github size={25} />, href: 'https://github.com/1fengs' },
+        { icon: <Linkedin size={25} />, href: 'https://www.linkedin.com/in/yifeng-shen95/' },
+        { icon: <Instagram size={25} />, href: 'https://www.instagram.com/esyf/' },
+        { icon: <Mail size={25} />, href: 'mailto:evanshen95@gmail.com' },
     ];
 
     // 👇 Detect if hero is visible
@@ -32,9 +32,9 @@ export function FloatingSocials() {
             lastScrollY = currentScrollY;
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
@@ -97,7 +97,11 @@ export function FloatingSocials() {
                                             animate={{ opacity: 1, x: 0 }}
                                             exit={{ opacity: 0, x: 20 }}
                                             transition={{ delay: i * 0.05 }}
-                                            className="w-11 h-11 flex text-black items-center justify-center rounded-full bg-white shadow-lg border border-gray-200 hover:bg-gray-100"
+                                            className="w-11 h-11 flex text-black items-center justify-center rounded-full
+        bg-white/40 backdrop-blur-lg
+        shadow-lg
+        transition-all duration-300
+        hover:scale-110 hover:bg-white/60"
                                         >
                                             {link.icon}
                                         </motion.a>
@@ -109,7 +113,7 @@ export function FloatingSocials() {
                         {/* MAIN BUTTON */}
                         <button
                             onClick={() => setOpen(!open)}
-                            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-xl"
+                            className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-xl hover:scale-110 transition-all duration-300"
                         >
                             {open ? <X size={20} /> : <MoreHorizontal size={20} />}
                         </button>

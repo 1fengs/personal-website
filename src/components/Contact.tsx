@@ -4,28 +4,30 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 function AvailableTag() {
-  return (
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
+    return (
+        <div
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full 
                     text-white text-sm font-medium
                     bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 
-                    bg-[length:200%_200%] animate-gradient">
-      
-      <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-      Available for Work
-    </div>
-  );
+                    bg-[length:200%_200%] animate-gradient"
+        >
+            <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+            Available for Work
+        </div>
+    );
 }
 
 function ContactCards() {
     return (
         <div className="flex justify-center mx-auto mb-6 px-4">
-            <div className="
+            <div
+                className="
                 subtle-blur-card 
                 p-4 md:p-6 
                 flex flex-col gap-4 w-[80%]
                 md:flex-row md:items-center md:gap-8
-            ">
-
+            "
+            >
                 {/* Email */}
                 <div className="flex items-center gap-3 flex-1">
                     <div className="w-10 h-10 bg-neutral-900 border border-neutral-700 rounded-lg flex items-center justify-center">
@@ -33,9 +35,7 @@ function ContactCards() {
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Email</div>
-                        <div className="body-txt break-all">
-                            evanshen95@gmail.com
-                        </div>
+                        <div className="body-txt break-all">evanshen95@gmail.com</div>
                     </div>
                 </div>
 
@@ -46,9 +46,7 @@ function ContactCards() {
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Phone</div>
-                        <div className="body-txt text-sm">
-                            +49 (0)152 25220284
-                        </div>
+                        <div className="body-txt text-sm">+49 (0)152 25220284</div>
                     </div>
                 </div>
 
@@ -59,69 +57,58 @@ function ContactCards() {
                     </div>
                     <div>
                         <div className="body-txt font-semibold">Location</div>
-                        <div className="body-txt text-sm">
-                            Berlin, Germany
-                        </div>
+                        <div className="body-txt text-sm">Berlin, Germany</div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
 }
 
 export function Contact() {
-
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
     });
 
     const handleSubmit = async (e: React.FormEvent) => {
-
         e.preventDefault();
 
         const res = await fetch('/api/contact', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData),
         });
 
         if (res.ok) {
-            alert("Message sent!");
+            alert('Message sent!');
             setFormData({ name: '', email: '', message: '' });
         } else {
-            alert("Something went wrong.");
+            alert('Something went wrong.');
         }
     };
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value,
         });
     };
 
     return (
-        <section
-            id="contact"
-            className="section-customer"
-        >
+        <section id="contact" className="section-customer">
             <div className="container-customer">
-
                 <div className="text-center mb-12">
                     <h2 className="main-txt mb-4">
                         Get <span className="text-blue-400">In Touch</span>
                     </h2>
 
                     <p className="body-txt text-gray-400">
-                        If you have any questions, want to collaborate,
-                        or just want to say hi, feel free to reach out.
+                        If you have any questions, want to collaborate, or just want to say hi, feel
+                        free to reach out.
                     </p>
                 </div>
 
@@ -132,16 +119,9 @@ export function Contact() {
                 <ContactCards />
 
                 <div className="mx-auto subtle-blur-card p-8 md:max-w-[78%]">
-
-                    <form
-                        onSubmit={handleSubmit}
-                        className="space-y-6"
-                    >
-
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div>
-                            <label className="body-txt block font-semibold mb-2">
-                                Name
-                            </label>
+                            <label className="body-txt block font-semibold mb-2">Name</label>
 
                             <input
                                 type="text"
@@ -155,9 +135,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="body-txt block font-semibold mb-2">
-                                Email
-                            </label>
+                            <label className="body-txt block font-semibold mb-2">Email</label>
 
                             <input
                                 type="email"
@@ -171,9 +149,7 @@ export function Contact() {
                         </div>
 
                         <div>
-                            <label className="body-txt block font-semibold mb-2">
-                                Message
-                            </label>
+                            <label className="body-txt block font-semibold mb-2">Message</label>
 
                             <textarea
                                 name="message"
@@ -188,11 +164,7 @@ export function Contact() {
 
                         <div>
                             {/* bot detection */}
-                            <input
-                                type="text"
-                                name="company"
-                                className="hidden"
-                            />
+                            <input type="text" name="company" className="hidden" />
                         </div>
 
                         <button
@@ -201,11 +173,8 @@ export function Contact() {
                         >
                             Send Message
                         </button>
-
                     </form>
-
                 </div>
-
             </div>
         </section>
     );
