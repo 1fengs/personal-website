@@ -5,16 +5,20 @@ import {Skills} from '../components/Skills';
 import {Projects} from '../components/Projects';
 import {Contact} from '../components/Contact';
 import {Footer} from '../components/Footer';
+import {Journey} from '../components/Journey';
+import {BackToTop} from '../components/ui/BackToTop';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="min-h-screen">
       <Header />
+      <BackToTop />
       <main>
         <Hero />
-        <About />
-        <Skills />
         <Projects />
+        <Skills />
+        <About />
+        <Journey />
         <Contact />
         <Footer />
       </main>
