@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 // import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -14,28 +14,26 @@ import "./globals.css";
 // });
 
 const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
+    variable: '--font-inter',
+    subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Yifeng Shen",
-  description: "Yifeng Shen's personal website, showcasing my work and skills.",
-  icons:{ icon:"favicon.ico" }
+    title: 'Yifeng Shen',
+    description: "Yifeng Shen's personal website, showcasing my work and skills.",
+    icons: { icon: 'favicon.ico' },
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${inter.className} antialiased relative overflow-x-hidden`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body className={`${inter.className} antialiased relative overflow-x-hidden`}>
+                {children}
+            </body>
+        </html>
+    );
 }
